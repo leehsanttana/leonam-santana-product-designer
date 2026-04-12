@@ -10,10 +10,9 @@ export function AboutSection() {
       <div className="grid lg:grid-cols-2 gap-24 items-center">
         <div className="relative">
           <div className="aspect-[4/5] rounded-[2rem] bg-bg-subtle overflow-hidden border border-border shadow-2xl relative z-10">
-            <Image
-              src="/personal photo.jpg"
+            <img
+              src="/personal-photo.jpg"
               alt="Leonam Santana"
-              fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-main/60 to-transparent pointer-events-none" />
