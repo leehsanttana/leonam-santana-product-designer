@@ -24,15 +24,15 @@ export function ImageBlock({ id, images, layout = "single", className }: ImageBl
   return (
     <section id={id} className={cn("py-12", className)}>
       <div className={cn("grid gap-8", gridClass[layout])}>
-        {images.map((img, idx) => (
+        {images?.map((img, idx) => (
           <div key={idx} className="flex flex-col gap-3">
             <div className="w-full bg-muted rounded-2xl overflow-hidden shadow-sm border border-border aspect-[4/3] flex items-center justify-center relative">
               {/* Fallback image style for when url is empty or mocked */}
               {img.url ? (
                 /* eslint-disable-next-line @next/next/no-img-element */
-                <img 
-                  src={img.url} 
-                  alt={img.alt} 
+                <img
+                  src={img.url}
+                  alt={img.alt}
                   className="object-cover w-full h-full hover:scale-[1.02] transition-transform duration-500"
                 />
               ) : (

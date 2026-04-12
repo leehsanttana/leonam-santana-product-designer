@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export interface CaseLayoutProps {
-  sections: Array<{ id: string; label: string; step: string }>;
+  sections: Array<{ id: string; label: string; step: string; color?: string }>;
   children: React.ReactNode;
   projectType: string;
   projectName: string;
@@ -45,6 +47,15 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
 
   return (
     <div className="container mx-auto px-4 sm:px-8 max-w-[1440px] pt-32 pb-24">
+      <Button variant="ghost" size="sm" asChild className="mb-12 gap-2 text-text-secondary hover:text-text-primary -ml-4">
+        <Link href="/">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+          Voltar para Home
+        </Link>
+      </Button>
+
       <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
 
         {/* Sidebar Navigation */}
@@ -61,28 +72,37 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
             <nav className="flex flex-col space-y-2">
               {sections.map((section) => {
                 const isActive = activeSection === section.id;
+                const activeColor = section.color || "#00e5ff";
+
                 return (
                   <button
                     key={section.id}
                     onClick={() => handleNavClick(section.id)}
                     className={cn(
                       "group flex items-center gap-4 px-3 py-3 rounded-2xl transition-all duration-300 text-left",
-                      isActive ? "bg-accent-cyan/10" : "hover:bg-white/5"
+                      isActive ? "bg-bg-elevated" : "hover:bg-white/5"
                     )}
+                    style={isActive ? { backgroundColor: `color-mix(in srgb, ${activeColor} 8%, transparent)` } : {}}
                   >
                     {/* Bullet */}
                     <div className="flex-shrink-0 flex items-center justify-center w-2 h-4">
-                      <div className={cn(
-                        "rounded-full transition-all duration-300",
-                        isActive ? "w-2 h-2 bg-accent-cyan shadow-[0px_0px_8px_rgba(0,229,255,0.6)]" : "w-1.5 h-1.5 bg-border group-hover:bg-text-secondary"
-                      )} />
+                      <div 
+                        className={cn(
+                          "rounded-full transition-all duration-300",
+                          isActive ? "w-2 h-2" : "w-1.5 h-1.5 bg-border group-hover:bg-text-secondary"
+                        )} 
+                        style={isActive ? { backgroundColor: activeColor, boxShadow: `0px 0px 8px color-mix(in srgb, ${activeColor} 60%, transparent)` } : {}}
+                      />
                     </div>
 
                     <div className="flex flex-col gap-0.5 min-w-0">
-                      <span className={cn(
-                        "text-[10px] font-medium tracking-[2px] uppercase",
-                        isActive ? "text-accent-cyan" : "text-text-muted"
-                      )}>
+                      <span 
+                        className={cn(
+                          "text-[10px] font-medium tracking-[2px] uppercase",
+                          !isActive && "text-text-muted"
+                        )}
+                        style={isActive ? { color: activeColor } : {}}
+                      >
                         {section.step}
                       </span>
                       <span className={cn(
