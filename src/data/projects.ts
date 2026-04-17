@@ -1,5 +1,6 @@
 export interface Project {
   id: string;
+  slug: string;
   title: string;
   type: string;
   href: string;
@@ -10,14 +11,16 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: "01",
+    slug: "core-system",
     title: "Core System",
-    type: "Design System • Sistemas • 2024",
+    type: "Web App • WealthTech • 2024",
     href: "/projects/core-system",
     disabled: false,
     image: "/Core-system-case/core-system-project-banner.jpg"
   },
   {
     id: "02",
+    slug: "adocao",
     title: "Adocão",
     type: "Mobile App • Health • 2025",
     href: "/projects/adocao",
@@ -25,6 +28,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "03",
+    slug: "viajaflux",
     title: "Viajaflux",
     type: "Mobile App • Viagens • 2023",
     href: "#",
@@ -33,6 +37,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "04",
+    slug: "medschool",
     title: "MedSchool",
     type: "Web App • Educação • 2024",
     href: "#",

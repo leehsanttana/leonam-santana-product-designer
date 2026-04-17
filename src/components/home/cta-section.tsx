@@ -2,14 +2,16 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export function CTASection() {
+  const t = useTranslations('cta');
   return (
     <section id="contact" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-40">
       <div className="bg-bg-elevated border border-border p-12 md:p-14 lg:p-16 rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl group">
 
         <h2 className="text-[40px] md:text-[56px] font-heading font-bold tracking-[-3px] text-text-primary leading-[1.1] max-w-md">
-          Vamos para o próximo nível juntos?
+          {t('title')}
         </h2>
 
         <div className="flex flex-col gap-4 w-full lg:w-auto">

@@ -1,0 +1,426 @@
+"use client";
+
+import React from "react";
+import { CaseLayout } from "@/components/case/shared/CaseLayout";
+import { CaseTitleHeader } from "@/components/case/shared/CaseTitleHeader";
+import { ImageCard } from "@/components/case/shared/ImageCard";
+import { VideoCard } from "@/components/case/shared/VideoCard";
+import { DiscoverRenderer } from "@/components/case/renderers/DiscoverRenderer";
+import { DefineRenderer } from "@/components/case/renderers/DefineRenderer";
+import { SolutionRenderer } from "@/components/case/renderers/SolutionRenderer";
+import { ResultsRenderer } from "@/components/case/renderers/ResultsRenderer";
+import { NextStepsRenderer } from "@/components/case/renderers/NextStepsRenderer";
+import { DataCard, DataGrid } from "@/components/case/shared/DataCard";
+import { PHASE_COLORS } from "@/lib/phase-colors";
+import { PROJECTS } from "@/data/projects";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+
+function NumberedContentCard({ number, text, colorClass = "border-border", bgClass = "bg-bg-elevated" }: { number: string, text: string, colorClass?: string, bgClass?: string }) {
+  return (
+    <div className={`p-4 rounded-2xl ${bgClass} border ${colorClass} flex flex-col md:flex-row gap-4 items-start md:items-center w-full`}>
+      <span className="text-[28px] font-heading font-bold leading-none shrink-0 text-text-muted">{number}</span>
+      <p className="font-light text-[16px] leading-[28px] text-text-primary flex-1">
+        {text}
+      </p>
+    </div>
+  );
+}
+
+function ColoredContentCard({ text, colorClass, bgClass, label }: { text: string, colorClass: string, bgClass: string, label?: string }) {
+  return (
+    <div className={`p-4 rounded-2xl ${bgClass} border ${colorClass} w-full flex gap-4 items-start`}>
+      {label && <span className={`text-4xl font-heading font-bold leading-none shrink-0 opacity-0`}>{label}</span>}
+      <p className="font-light text-base leading-7 text-text-primary flex-1">
+        {text}
+      </p>
+    </div>
+  );
+}
+
+function ResultListItem({ text, type }: { text: string; type: "improvement" | "attention" }) {
+  return (
+    <li className="flex items-start gap-3">
+      {type === "improvement" ? (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-1 text-accent-green">
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+      ) : (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-1 text-accent-red">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+      )}
+      <span className={`text-[18px] leading-[30px] font-normal ${type === "improvement" ? "text-accent-green" : "text-accent-red"}`}>
+        {text}
+      </span>
+    </li>
+  );
+}
+
+export default function CoreSystemCase() {
+  const t = useTranslations("core-system");
+  const tc = useTranslations("common");
+  const tp = useTranslations("projects");
+
+  const sections = [
+    { id: "discover", label: t("sections.discover"), step: "DESCOBRIR", color: PHASE_COLORS.discover },
+    { id: "define", label: t("sections.define"), step: "DEFINIR", color: PHASE_COLORS.define },
+    { id: "solution", label: t("sections.solution"), step: "SOLUÇÃO", color: PHASE_COLORS.solution },
+    { id: "results", label: t("sections.results"), step: "RESULTADOS", color: PHASE_COLORS.results },
+    { id: "next-steps", label: t("sections.nextSteps"), step: "PRÓXIMOS PASSOS", color: PHASE_COLORS.neutral },
+  ];
+
+  const metadata = [
+    { label: t("metadata.role.label"), value: t("metadata.role.value") },
+    { label: t("metadata.duration.label"), value: t("metadata.duration.value") },
+    { label: t("metadata.platform.label"), value: t("metadata.platform.value") },
+    { label: t("metadata.tools.label"), value: t("metadata.tools.value") },
+  ];
+
+  const skills = ["UX/UI", "Web App", "Prototype", "2023"];
+  const heroImage = "/Core-system-case/core-system-banner.jpg";
+
+  return (
+    <CaseLayout
+      projectName={t("projectName")}
+      projectType={t("projectType")}
+      sections={sections}
+    >
+      {/* HEADER SECTION */}
+      <CaseTitleHeader
+        title={t("title")}
+        description={t("subtitle")}
+        skills={skills}
+        metrics={metadata}
+        heroImage={heroImage}
+      />
+
+      <div className="mb-12 rounded-2xl border border-border bg-bg-elevated p-4">
+        <p className="text-text-primary font-light leading-[28px]">
+          {t("confidentiality")}
+        </p>
+      </div>
+
+      {/* VISÃO GERAL */}
+      <section className="mb-12 py-8 border-b border-border">
+        <h2 className="text-heading-02 text-text-primary mb-4">{t("overview.title")}</h2>
+        <div className="text-body-01 text-text-secondary mb-12 max-w-[750px] space-y-6">
+          <p>{t("overview.p1")}</p>
+          <p>{t("overview.p2")}</p>
+        </div>
+
+        <h3 className="text-xl font-heading font-bold text-text-primary mb-4">{t("role.title")}</h3>
+        <div className="text-body-01 text-text-secondary max-w-[750px] space-y-4">
+          <p>{t("role.p1")}</p>
+          <p>{t("role.p2")}</p>
+          <p>{t("role.p3")}</p>
+        </div>
+      </section>
+
+      {/* 01. DESCOBRIR */}
+      <DiscoverRenderer
+        id="discover"
+        title={t("discover.title")}
+        description={t("discover.description")}
+      >
+        <div className="space-y-8 mb-12">
+          <div>
+            <h3 className="text-xl font-heading font-bold text-text-primary mb-4">{t("discover.dashboard.title")}</h3>
+            <div className="flex flex-col md:flex-row gap-4">
+              <NumberedContentCard number="01" text={t("discover.dashboard.gaps.0")} />
+              <NumberedContentCard number="02" text={t("discover.dashboard.gaps.1")} />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-heading font-bold text-text-primary mb-4">{t("discover.inbox.title")}</h3>
+            <div className="flex flex-col md:flex-row gap-4">
+              <NumberedContentCard number="01" text={t("discover.inbox.gaps.0")} />
+              <NumberedContentCard number="02" text={t("discover.inbox.gaps.1")} />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-heading font-bold text-text-primary mb-4">{t("discover.processing.title")}</h3>
+            <div className="flex flex-col md:flex-row gap-4">
+              <NumberedContentCard number="01" text={t("discover.processing.gaps.0")} />
+              <NumberedContentCard number="02" text={t("discover.processing.gaps.1")} />
+            </div>
+          </div>
+        </div>
+
+        <p className="text-body-01 text-text-secondary mb-6">
+          {t("discover.automation")}
+        </p>
+
+        <DataGrid columns={3}>
+          <DataCard
+            content={t("discover.cards.0")}
+            color="var(--color-accent-cyan)"
+          />
+          <DataCard
+            content={t("discover.cards.1")}
+            color="var(--color-accent-cyan)"
+          />
+          <DataCard
+            content={t("discover.cards.2")}
+            color="var(--color-accent-cyan)"
+          />
+        </DataGrid>
+
+        <p className="text-body-01 text-text-secondary mb-6 max-w-[750px]">
+          {t("discover.evident")}
+        </p>
+
+        <div className="space-y-4">
+          <div className="bg-accent-cyan/10 border-l-[3px] border-accent-cyan p-8 rounded-2xl">
+            <p className="text-body-01 text-text-primary">
+              {t("discover.findings.0")}
+            </p>
+          </div>
+          <div className="bg-accent-cyan/10 border-l-[3px] border-accent-cyan p-8 rounded-2xl">
+            <p className="text-body-01 text-text-primary">
+              {t("discover.findings.1")}
+            </p>
+          </div>
+          <div className="bg-accent-cyan/10 border-l-[3px] border-accent-cyan p-8 rounded-2xl">
+            <p className="text-body-01 text-text-primary">
+              {t("discover.findings.2")}
+            </p>
+          </div>
+        </div>
+      </DiscoverRenderer>
+
+      {/* 02. DEFINIR */}
+      <DefineRenderer
+        id="define"
+        title={t("define.title")}
+        description={t("define.description")}
+      >
+        <div className="space-y-12">
+          {/* Dashboard Panel */}
+          <div className="flex flex-col xl:flex-row gap-6 items-start">
+            <div className="w-full xl:w-[650px] shrink-0">
+              <ImageCard
+                imageDescription={t("define.dashboard.title")}
+                imageUrl="/Core-system-case/core-system-dashboard.png"
+                alt="Dashboard"
+              />
+            </div>
+            <div className="flex-1 space-y-4 w-full">
+              <h3 className="text-3xl font-heading font-bold text-text-primary">{t("define.dashboard.title")}</h3>
+              <p className="text-body-01 text-text-primary">{t("define.dashboard.subtitle")}</p>
+              <ColoredContentCard 
+                text={t("define.dashboard.cards.0")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+              <ColoredContentCard 
+                text={t("define.dashboard.cards.1")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+            </div>
+          </div>
+
+          {/* Inbox Panel */}
+          <div className="flex flex-col xl:flex-row gap-6 items-start">
+            <div className="flex-1 space-y-4 w-full order-2 xl:order-1">
+              <h3 className="text-3xl font-heading font-bold text-text-primary">{t("define.inbox.title")}</h3>
+              <p className="text-body-01 text-text-primary">{t("define.inbox.subtitle")}</p>
+              <ColoredContentCard 
+                text={t("define.inbox.cards.0")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+              <ColoredContentCard 
+                text={t("define.inbox.cards.1")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+              <ColoredContentCard 
+                text={t("define.inbox.cards.2")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+            </div>
+            <div className="w-full xl:w-[650px] shrink-0 order-1 xl:order-2">
+              <ImageCard
+                imageDescription={t("define.inbox.title")}
+                imageUrl="/Core-system-case/core-system-inbox.png"
+                alt="Inbox"
+              />
+            </div>
+          </div>
+
+          {/* Gerenciamento de casos Panel */}
+          <div className="flex flex-col xl:flex-row gap-6 items-start">
+            <div className="w-full xl:w-[650px] shrink-0">
+              <ImageCard
+                imageDescription={t("define.management.title")}
+                imageUrl="/Core-system-case/core-syste-case-management.png"
+                alt="Gerenciamento de casos"
+              />
+            </div>
+            <div className="flex-1 space-y-4 w-full">
+              <h3 className="text-3xl font-heading font-bold text-text-primary">{t("define.management.title")}</h3>
+              <p className="text-body-01 text-text-primary">{t("define.management.subtitle")}</p>
+              <ColoredContentCard 
+                text={t("define.management.cards.0")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+              <ColoredContentCard 
+                text={t("define.management.cards.1")}
+                bgClass="bg-accent-yellow/5"
+                colorClass="border-accent-yellow"
+              />
+            </div>
+          </div>
+
+        </div>
+      </DefineRenderer>
+
+      {/* 04. SOLUÇÃO */}
+      <SolutionRenderer
+        id="solution"
+        title={t("solution.title")}
+        description=""
+      >
+        <div className="space-y-6">
+          <VideoCard 
+            videoDescription="PensionDynamics"
+            videoUrl="/Core-system-case/CoreSystem-SalesVideo.mp4"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <ColoredContentCard 
+                key={i}
+                text={t(`solution.cards.${i}`)}
+                bgClass="bg-accent-pink/10"
+                colorClass="border-accent-pink"
+              />
+            ))}
+          </div>
+        </div>
+      </SolutionRenderer>
+
+      {/* 06. RESULTADOS */}
+      <ResultsRenderer
+        id="results"
+        title={t("results.title")}
+        description={t("results.description")}
+      >
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-body-01 text-text-primary font-bold mb-8">{t("results.dashboardInbox.title")}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+              <div>
+                 <p className="text-body-02 text-text-primary mb-4">{t("results.labels.improvements")}</p>
+                 <ul className="space-y-3">
+                   <ResultListItem type="improvement" text={t("results.improvements.0")} />
+                   <ResultListItem type="improvement" text={t("results.improvements.1")} />
+                 </ul>
+              </div>
+              <div>
+                 <p className="text-body-02 text-text-primary mb-4">{t("results.labels.attention")}</p>
+                 <ul className="space-y-3">
+                   <ResultListItem type="attention" text={t("results.attentions.0")} />
+                   <ResultListItem type="attention" text={t("results.attentions.1")} />
+                 </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+             <h3 className="text-body-01 text-text-primary font-bold mb-8">{t("results.caseManager.title")}</h3>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+               <div>
+                 <p className="text-body-02 text-text-primary mb-4">{t("results.labels.improvements")}</p>
+                 <ul className="space-y-3">
+                   <ResultListItem type="improvement" text={t("results.improvements.2")} />
+                   <ResultListItem type="improvement" text={t("results.improvements.3")} />
+                   <ResultListItem type="improvement" text={t("results.improvements.4")} />
+                   <ResultListItem type="improvement" text={t("results.improvements.5")} />
+                 </ul>
+               </div>
+               <div>
+                 <p className="text-body-02 text-text-primary mb-4">{t("results.labels.attention")}</p>
+                 <ul className="space-y-3">
+                   <ResultListItem type="attention" text={t("results.attentions.2")} />
+                   <ResultListItem type="attention" text={t("results.attentions.3")} />
+                   <ResultListItem type="attention" text={t("results.attentions.4")} />
+                 </ul>
+               </div>
+             </div>
+          </div>
+
+          <div className="pt-4 border-t border-border">
+            <p className="text-body-01 text-text-primary mb-4">{t("results.overall.score")}</p>
+            <p className="text-body-01 text-text-secondary max-w-[750px]">
+              {t("results.overall.desc")}
+            </p>
+          </div>
+        </div>
+      </ResultsRenderer>
+
+      {/* 07. PRÓXIMOS PASSOS */}
+      <NextStepsRenderer
+        id="next-steps"
+        title={t("nextSteps.title")}
+        description={t("nextSteps.description")}
+      >
+        <div className="space-y-4 mt-6">
+          {[0, 1, 2, 3].map((i) => (
+            <NumberedContentCard 
+              key={i}
+              number={`0${i + 1}`}
+              text={t(`nextSteps.steps.${i}`)}
+            />
+          ))}
+        </div>
+      </NextStepsRenderer>
+
+      {/* NEXT PROJECT BANNER */}
+      {(() => {
+        const currentIndex = PROJECTS.findIndex(p => p.title === "Core System");
+        const nextProject = PROJECTS[(currentIndex + 1) % PROJECTS.length];
+
+        return (
+          <Link
+            href={nextProject.href as any}
+            className={`mt-12 relative block rounded-[24px] overflow-hidden group border border-border ${nextProject.disabled ? 'pointer-events-none opacity-40' : 'cursor-pointer'}`}
+          >
+            {nextProject ? (
+              <div className="w-full relative h-[300px]">
+                <img
+                  src={nextProject.image}
+                  alt={nextProject.title}
+                  className="object-cover w-full h-full opacity-40 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
+                <div className="absolute bottom-10 left-10">
+                  <span className="text-body-04 text-text-muted mb-2 block">{tc("nextProject")}</span>
+                  <h2 className="text-3xl font-heading font-bold text-text-primary mb-1">{nextProject.title}</h2>
+                  <p className="text-text-secondary font-light">{tp(`list.${nextProject.slug}.type`)}</p>
+                </div>
+                {!nextProject.disabled && (
+                  <div className="absolute bottom-10 right-10 w-12 h-12 rounded-full border border-accent-cyan/30 bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-cyan">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                )}
+              </div>
+            ) : null}
+          </Link>
+        );
+      })()}
+    </CaseLayout>
+  );
+}
+

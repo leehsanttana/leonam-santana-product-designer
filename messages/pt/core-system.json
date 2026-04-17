@@ -1,0 +1,163 @@
+{
+  "projectType": "Web App",
+  "projectName": "Core System",
+  "title": "Core System",
+  "subtitle": "Trazendo clareza na tomada de decis\u00f5es em processos de gest\u00e3o de aposentadoria.",
+  "confidentiality": "\u201cAlguns detalhes foram adaptados ou omitidos por quest\u00f5es de confidencialidade, mantendo o foco nos desafios de design e nas solu\u00e7\u00f5es propostas.\u201d",
+  "metadata": {
+    "role": {
+      "label": "PAPEL",
+      "value": "UX/UI Designer"
+    },
+    "duration": {
+      "label": "DURA\u00c7\u00c3O",
+      "value": "3 meses"
+    },
+    "platform": {
+      "label": "PLATAFORMA",
+      "value": "Web / Desktop"
+    },
+    "tools": {
+      "label": "FERRAMENTAS",
+      "value": "Figma, FigJam"
+    }
+  },
+  "sections": {
+    "discover": "Identificando os gaps",
+    "define": "Definindo as lacunas",
+    "solution": "Design da solu\u00e7\u00e3o final",
+    "results": "Resultados e impacto",
+    "nextSteps": "O que vem a seguir"
+  },
+  "overview": {
+    "title": "Vis\u00e3o geral",
+    "p1": "O Core System \u00e9 a plataforma central respons\u00e1vel por gerenciar processos complexos relacionados \u00e0 gest\u00e3o de pens\u00f5es e aposentadorias.",
+    "p2": "O desafio deste projeto foi transformar uma estrutura j\u00e1 definida em uma interface clara, reduzindo a complexidade operacional e aumentando a confian\u00e7a do usu\u00e1rio."
+  },
+  "role": {
+    "title": "Meu papel na equipe",
+    "p1": "Atuei como UX/UI Designer, sendo respons\u00e1vel por transformar a arquitetura existente em uma interface clara, consistente e utiliz\u00e1vel.",
+    "p2": "Trabalhei na constru\u00e7\u00e3o das telas finais e prot\u00f3tipos utilizados tanto para valida\u00e7\u00e3o com usu\u00e1rios quanto para comunica\u00e7\u00e3o do produto.",
+    "p3": "O projeto foi desenvolvido em colabora\u00e7\u00e3o com um time multidisciplinar, incluindo um per\u00edodo de trabalho presencial na Su\u00ed\u00e7a."
+  },
+  "discover": {
+    "title": "Identificando os gaps",
+    "description": "O projeto \u00e9 constitu\u00eddo por algumas features como: Dashboard, Inbox (gerenciamento de documentos recebidos) e Processamento de casos. A partir da an\u00e1lise do sistema existente e dos resultados de testes de usabilidade, identifiquei pontos cr\u00edticos que impactavam a compreens\u00e3o e o fluxo de trabalho dos usu\u00e1rios.",
+    "dashboard": {
+      "title": "No Dashboard",
+      "gaps": [
+        "Falta de a\u00e7\u00e3o direta (querem clicar e ir para inbox)",
+        "Algumas m\u00e9tricas pouco relevantes"
+      ]
+    },
+    "inbox": {
+      "title": "No Inbox",
+      "gaps": [
+        "Expectativa de criar algo novo (n\u00e3o s\u00f3 processar)",
+        "Conceito do inbox n\u00e3o \u00e9 totalmente claro"
+      ]
+    },
+    "processing": {
+      "title": "Processamento de casos",
+      "gaps": [
+        "O sistema n\u00e3o possui um bom feedback para o que foi realizado",
+        "Falta a\u00e7\u00f5es para que o usu\u00e1rio confirme que os passos foram realizados"
+      ]
+    },
+    "automation": "Al\u00e9m disso, em rela\u00e7\u00e3o \u00e0 automa\u00e7\u00e3o foi observado que:",
+    "cards": [
+      "O modelo mental existe, mas n\u00e3o est\u00e1 sendo comunicado pelo UI",
+      "A automa\u00e7\u00e3o \u00e9 boa, mas n\u00e3o passa total confian\u00e7a",
+      "O produto \u00e9 funcionalmente bom, mas emocionalmente inseguro"
+    ],
+    "evident": "Ap\u00f3s a an\u00e1lise dos resultados, ficou evidente que:",
+    "findings": [
+      "O sistema apresenta alta clareza visual e efici\u00eancia operacional, mas falha na orienta\u00e7\u00e3o inicial e na constru\u00e7\u00e3o de confian\u00e7a.",
+      "Usu\u00e1rios entendem os fluxos ap\u00f3s explica\u00e7\u00e3o, indicando um desalinhamento entre o modelo mental e a interface.",
+      "A maior oportunidade est\u00e1 em tornar a automa\u00e7\u00e3o transparente e guiada, sem remover o senso de controle do usu\u00e1rio."
+    ]
+  },
+  "define": {
+    "title": "Definindo as lacunas dos problemas",
+    "description": "Ap\u00f3s a an\u00e1lise dos resultados, ficou evidente que:",
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Problemas",
+      "cards": [
+        "O dashboard n\u00e3o orienta o usu\u00e1rio para sua tarefa principal, dificultando o direcionamento inicial do fluxo de trabalho",
+        "A falta de hierarquia visual clara gera incerteza sobre prioridades, impactando a tomada de decis\u00e3o"
+      ]
+    },
+    "inbox": {
+      "title": "Inbox",
+      "subtitle": "Problemas",
+      "cards": [
+        "Baixo contraste e aus\u00eancia de padr\u00f5es tornam dif\u00edcil identificar elementos interativos e entender como executar a\u00e7\u00f5es no sistema",
+        "A prioriza\u00e7\u00e3o de \u00e1reas sem fun\u00e7\u00e3o clara desvia a aten\u00e7\u00e3o do usu\u00e1rio, aumentando a fric\u00e7\u00e3o no in\u00edcio da jornada",
+        "A organiza\u00e7\u00e3o visual n\u00e3o comunica adequadamente o fluxo de trabalho, dificultando a compreens\u00e3o do processo como um todo"
+      ]
+    },
+    "management": {
+      "title": "Gerenciamento de casos",
+      "subtitle": "Problemas",
+      "cards": [
+        "O fluxo n\u00e3o \u00e9 demonstrado corretamente, gerando confus\u00e3o no que de fato precisa ser feito atualmente.",
+        "Apesar dos status visuais do que precisa ser feito e do que est\u00e1 pronto, ainda \u00e9 confuso quais a\u00e7\u00f5es tomar dentro do sistema, gerando inseguran\u00e7a."
+      ]
+    }
+  },
+  "solution": {
+    "title": "Redefinindo a estrutura visual",
+    "cards": [
+      "Direcionei a aten\u00e7\u00e3o do usu\u00e1rio para as a\u00e7\u00f5es principais atrav\u00e9s de hierarquia visual e consist\u00eancia do design system",
+      "Estruturei o fluxo de forma clara e progressiva, guiando o usu\u00e1rio ao longo das etapas do processo",
+      "Tornei elementos interativos e estados mais evidentes, reduzindo ambiguidade e erros",
+      "Introduzi intera\u00e7\u00f5es diretas e contextuais, aumentando efici\u00eancia e reduzindo navega\u00e7\u00e3o desnecess\u00e1ria",
+      "Aumentei o foco na tarefa ativa com feedback visual e motion, reduzindo distra\u00e7\u00f5es",
+      "Reforcei transpar\u00eancia e controle com estados claros, valida\u00e7\u00f5es e feedbacks de a\u00e7\u00e3o"
+    ]
+  },
+  "results": {
+    "title": "Resultados e impacto",
+    "description": "Ap\u00f3s a implementa\u00e7\u00e3o das melhorias, os testes indicaram avan\u00e7os relevantes na compreens\u00e3o do sistema e na execu\u00e7\u00e3o das tarefas.",
+    "dashboardInbox": {
+      "title": "Dashboard e Inbox"
+    },
+    "caseManager": {
+      "title": "Gerenciador de casos"
+    },
+    "labels": {
+      "improvements": "Melhorias",
+      "attention": "Pontos de aten\u00e7\u00e3o"
+    },
+    "improvements": [
+      "O fluxo ficou mais claro para a maioria dos usu\u00e1rios",
+      "Inbox \u00e9 reconhecida como local de tarefas",
+      "Lista de pend\u00eancias \u00e9 percebida",
+      "Estrutura geral compreendida",
+      "A\u00e7\u00e3o de \"processar dados\" \u00e9 compreendida",
+      "Usu\u00e1rios conseguem avan\u00e7ar no fluxo"
+    ],
+    "attentions": [
+      "Inbox pessoal vs compartilhada",
+      "O que \u00e9 edit\u00e1vel direto",
+      "Estados visuais (cinza) n\u00e3o s\u00e3o claros inicialmente",
+      "Ainda falta mais contexto de alguns dados",
+      "Dificuldade de identificar o status atual do caso"
+    ],
+    "overall": {
+      "score": "Avalia\u00e7\u00e3o geral do teste: 8 de 10",
+      "desc": "O sistema mostrou alta efici\u00eancia e aprendizado r\u00e1pido, permitindo que usu\u00e1rios realizem tarefas complexas rapidamente. Por\u00e9m, falha em orientar decis\u00f5es cr\u00edticas e no onboarding, resultando em inconsist\u00eancias. A transpar\u00eancia dos dados, como na lista de transa\u00e7\u00f5es, foi um fator chave para a confian\u00e7a e usabilidade."
+    }
+  },
+  "nextSteps": {
+    "title": "O que vem a seguir",
+    "description": "A partir dos aprendizados do segundo ciclo de testes, foram identificadas oportunidades para evoluir o sistema em termos de orienta\u00e7\u00e3o, confian\u00e7a e robustez.",
+    "steps": [
+      "Refinar a experi\u00eancia inicial do usu\u00e1rio, tornando mais claras as a\u00e7\u00f5es dispon\u00edveis e o caminho a seguir desde o primeiro contato com o sistema.",
+      "Evoluir a forma como o sistema comunica automa\u00e7\u00f5es e decis\u00f5es, oferecendo maior visibilidade sobre o que est\u00e1 acontecendo e permitindo valida\u00e7\u00e3o pelo usu\u00e1rio.",
+      "Tornar estados, confirma\u00e7\u00f5es e feedbacks mais consistentes ao longo da interface, garantindo que o usu\u00e1rio compreenda claramente o progresso e o impacto de suas a\u00e7\u00f5es.",
+      "Evoluir o sistema para lidar melhor com casos mais complexos e exce\u00e7\u00f5es, garantindo consist\u00eancia mesmo em situa\u00e7\u00f5es fora do fluxo padr\u00e3o."
+    ]
+  }
+}

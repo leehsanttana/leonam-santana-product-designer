@@ -1,18 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
 import { PROJECTS } from "@/data/projects";
+import { useTranslations } from "next-intl";
 
 export function ProjectsSection() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const activeProject = PROJECTS.find(p => p.id === hoveredId);
+  const t = useTranslations('projects');
 
   return (
     <section id="projects" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-32 border-b border-border">
       <div className="flex flex-col gap-12">
-        <h2 className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted">Trabalhos Selecionados</h2>
+        <h2 className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted">{t('sectionTitle')}</h2>
 
         <div className="flex flex-col lg:flex-row gap-24 items-start">
           {/* Projects List */}
@@ -30,7 +32,9 @@ export function ProjectsSection() {
                     {project.id}
                   </span>
                   <div className="flex flex-col gap-1">
-                    <span className="text-[14px] font-light text-text-secondary group-hover:text-text-primary transition-colors">{project.type}</span>
+                    <span className="text-[14px] font-light text-text-secondary group-hover:text-text-primary transition-colors">
+                      {t(`list.${project.slug}.type`)}
+                    </span>
                     <h3 className="text-2xl md:text-[32px] font-heading font-bold text-text-primary">
                       {project.title}
                     </h3>
@@ -82,9 +86,7 @@ export function ProjectsSection() {
                         <path d="M21 15l-5-5L5 21" />
                       </svg>
                     </div>
-                    <div className="text-center text-sm font-light text-text-muted leading-relaxed uppercase tracking-[1px]">
-                      Passe o mouse <br /> em um projeto
-                    </div>
+                    <div className="text-center text-sm font-light text-text-muted leading-relaxed uppercase tracking-[1px]" dangerouslySetInnerHTML={{ __html: t.raw('hoverInstruction') }} />
                   </motion.div>
                 )}
               </AnimatePresence>
