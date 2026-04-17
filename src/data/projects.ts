@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     title: "Adocão",
     type: "Mobile App • Health • 2025",
     href: "/projects/adocao",
-    image: "/Adocao-case/adocao-project-banner.jpg",
+    image: "/Adocao-case/Adocao-project-banner.jpg",
     imageAlt: "/Adocao-case/adocao-banner.jpg"
   },
   {
