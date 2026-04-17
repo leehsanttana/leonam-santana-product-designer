@@ -61,7 +61,7 @@ export default function AdocaoCase() {
       {/* VISÃO GERAL */}
       <section className="mb-8 py-8 border-b border-border">
         <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">Visão geral</h2>
-        <div className="text-[18px] text-text-secondary leading-[1.6] font-light max-w-[750px] space-y-6">
+        <div className="text-body-01 text-text-secondary max-w-[750px] space-y-6">
           <p>
             O processo de adoção de pets no Brasil é, na maioria das vezes, longo, burocrático e pouco guiado — o que faz muitas pessoas desistirem no meio do caminho. O Adocão nasceu para mudar isso.
           </p>
@@ -92,7 +92,7 @@ export default function AdocaoCase() {
           />
         </DataGrid>
 
-        <p className="text-[18px] text-text-secondary leading-[1.6] font-light max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
           Apesar dos números positivos para as adoções, ainda existem números alarmantes quanto aos animais abandonados, com os cães dominando as estatísticas:
         </p>
 
@@ -111,7 +111,7 @@ export default function AdocaoCase() {
           />
         </DataGrid>
 
-        <p className="text-[18px] text-text-secondary leading-[1.6] font-light max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
           Antes de propor qualquer solução, precisava entender o que já existia — e mais importante: o que faltava. Mapiei os principais apps de adoção do mercado para identificar padrões, gaps e oportunidades não atendidas:
         </p>
 
@@ -219,7 +219,7 @@ export default function AdocaoCase() {
         </div>
 
         <h3 className="text-xl font-heading font-bold text-text-primary mb-4">Gerando POVs</h3>
-        <p className="text-[18px] text-text-secondary leading-[1.6] font-light max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
           Através dos POVs, consigo aprofundar o foco no problema e gerar empatia entendendo corretamente os tipos de perfis dos usuários.
         </p>
 
@@ -325,7 +325,7 @@ export default function AdocaoCase() {
 
         <div className="mt-8 pt-8 border-t border-border/50">
           <h3 className="text-3xl font-heading font-bold text-text-primary mb-4">Resultado final</h3>
-          <div className="text-[18px] text-text-secondary leading-[1.6] font-light max-w-[850px] space-y-6 mb-6">
+          <div className="text-body-01 text-text-secondary max-w-[850px] space-y-6 mb-6">
             <p>
               O Adocão nasce de uma convicção simples: adotar bem é tão importante quanto adotar bastante.
             </p>
@@ -417,10 +417,10 @@ export default function AdocaoCase() {
 
         return (
           <section
-            className="mt-12 p-1 relative rounded-[24px] overflow-hidden group cursor-pointer border border-border"
+            className="mt-12 relative rounded-[24px] overflow-hidden group cursor-pointer border border-border"
             onClick={() => !nextProject.disabled && (window.location.href = nextProject.href)}
           >
-            <div className="aspect-[21/9] w-full relative">
+            <div className="w-full relative h-[300px]">
               <img
                 src={nextProject.image}
                 alt={nextProject.title}
@@ -428,7 +428,7 @@ export default function AdocaoCase() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
               <div className="absolute bottom-10 left-10">
-                <span className="text-[12px] font-medium tracking-[2px] uppercase text-text-muted mb-2 block">PRÓXIMO PROJETO</span>
+                <span className="text-body-04 text-text-muted mb-2 block">PRÓXIMO PROJETO</span>
                 <h2 className="text-3xl font-heading font-bold text-text-primary mb-1">{nextProject.title}</h2>
                 <p className="text-text-secondary font-light">{nextProject.type}</p>
               </div>

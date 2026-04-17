@@ -33,21 +33,27 @@
   --color-accent-green: #30d158;
   --color-accent-red: #ff6b6b;
   --color-text-primary: #ede8f7;
-  --color-text-secondary: #8879a8;
+  --color-text-secondary: #AC9CCD;
   --color-text-muted: #4a4460;
 
   --radius-xl: calc(var(--radius) + 4px);
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-  
+
   --font-sans: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
   @keyframes grid {
-    0% { transform: translateY(-50%); }
-    100% { transform: translateY(0); }
+    0% {
+      transform: translateY(-50%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
+
   --animate-grid: grid 15s linear infinite;
 }
 
@@ -79,5 +85,66 @@
     background-color: var(--background);
     color: var(--foreground);
     @apply antialiased min-h-screen font-sans;
+  }
+}
+
+/* Semantics Typography - Figma */
+@layer utilities {
+  .text-heading-01 {
+    font-family: var(--font-space-grotesk);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .text-heading-02 {
+    font-family: var(--font-space-grotesk);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .text-body-01 {
+    font-family: var(--font-lexend);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .text-body-02 {
+    font-family: var(--font-lexend);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .text-body-03 {
+    font-family: var(--font-lexend);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-subheading {
+    font-family: var(--font-lexend);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-body-04 {
+    font-family: var(--font-lexend);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .text-link {
+    font-family: var(--font-lexend);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
   }
 }

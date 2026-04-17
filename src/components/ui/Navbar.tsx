@@ -7,7 +7,7 @@ export function Navbar() {
       <header className="bg-bg-elevated/80 backdrop-blur-md border border-border flex items-center gap-4 px-6 py-3 rounded-full shadow-2xl">
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center gap-4 group">
-          <div 
+          <div
             className="h-8 w-8 rounded-lg flex items-center justify-center text-white font-bold font-heading text-sm shadow-[0px_2px_10px_0px_rgba(224,64,251,0.4)]"
             style={{ backgroundImage: "linear-gradient(135deg, #e040fb 0%, #8b2fc9 55%, #00e5ff 100%)" }}
           >
@@ -29,9 +29,9 @@ export function Navbar() {
             { label: "FAQ", href: "#faq" },
             { label: "Contato", href: "#contact" },
           ].map((link) => (
-            <Link 
+            <Link
               key={link.label}
-              href={link.href} 
+              href={link.href}
               className="px-4 py-1.5 text-sm font-light text-text-primary hover:bg-white/5 rounded-full transition-all"
             >
               {link.label}
@@ -48,7 +48,7 @@ export function Navbar() {
             <span className="absolute inline-flex h-full w-full rounded-full bg-[#00c87a] opacity-40 animate-pulse"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00c87a] shadow-[0px_0px_6px_0px_#00c87a]"></span>
           </div>
-          <span className="text-[14px] text-text-muted font-normal">Disponível</span>
+          <span className="text-[14px] text-text-secondary font-normal">Disponível</span>
         </div>
       </header>
     </div>

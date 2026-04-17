@@ -17,7 +17,7 @@ export function PhaseLabel({ number, label, color, className }: PhaseLabelProps)
   return (
     <div className={cn("inline-flex gap-[8px] items-center", className)}>
       <p
-        className={cn("font-heading font-light leading-[20px] text-[14px]", !color && "text-accent-cyan")}
+        className={cn("text-body-03", !color && "text-accent-cyan")}
         style={textStyle}
       >
         {number}
@@ -27,7 +27,7 @@ export function PhaseLabel({ number, label, color, className }: PhaseLabelProps)
         style={bgStyle}
       >
         <p
-          className={cn("font-heading font-medium leading-[20px] text-[14px] tracking-[2px] uppercase", !color && "text-accent-cyan")}
+          className={cn("text-body-04", !color && "text-accent-cyan")}
           style={textStyle}
         >
           {label}

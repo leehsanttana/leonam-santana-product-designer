@@ -27,7 +27,7 @@ export function BenchmarkingTable({ columns, rows }: BenchmarkingTableProps) {
         {/* Table Headers */}
         {columns.map((col, idx) => (
           <div key={idx} className="pb-2">
-            <h3 className="text-[18px] font-heading font-normal text-text-primary leading-[30px]">
+            <h3 className="text-body-01 text-text-primary">
               {col}
             </h3>
           </div>
