@@ -1,0 +1,261 @@
+{
+  "projectType": "Mobile App",
+  "projectName": "Adocão",
+  "title": "Adocão",
+  "subtitle": "Um app que transforma a adoção responsável de pets numa jornada guiada — do primeiro swipe ao acompanhamento pós-lar.",
+  "metadata": {
+    "role": {
+      "label": "PAPEL",
+      "value": "UX/UI Designer (solo)"
+    },
+    "duration": {
+      "label": "DURAÇÃO",
+      "value": "3 meses"
+    },
+    "platform": {
+      "label": "PLATAFORMA",
+      "value": "Mobile"
+    },
+    "tools": {
+      "label": "FERRAMENTAS",
+      "value": "Figma, FigJam, ChatGPT"
+    }
+  },
+  "sections": {
+    "discover": "Entendendo o ecossistema",
+    "define": "Definando o problema real",
+    "idealize": "Explorando caminhos",
+    "solution": "Design da solução final",
+    "nextSteps": "O que vem a seguir"
+  },
+  "overview": {
+    "title": "Visão geral",
+    "p1": "O processo de adoção de pets no Brasil é, na maioria das vezes, longo, burocrático e pouco guiado — o que faz muitas pessoas desistirem no meio do caminho. O Adocão nasceu para mudar isso.",
+    "p2": "O app centraliza toda a jornada: da descoberta do pet ideal ao acompanhamento pós-adoção — e ainda funciona como uma rede colaborativa de resgate, conectando a comunidade em torno de animais em situação de risco."
+  },
+  "discover": {
+    "title": "Identificando o fenômeno",
+    "description": "O interesse por adoção de pets cresceu 400% durante a pandemia — um fenômeno impulsionado pelo isolamento e liderado pela Geração Z. Mais adoções também revelaram um lado preocupante: o abandono cresceu junto. A pesquisa começou aqui.",
+    "cards": {
+      "genZ": {
+        "title": "Geração Z na Liderança",
+        "content": "Jovens entre 18 e 24 anos lideram as adoções, com 32% adotando pets após encontrá-los nas ruas, superando as adoções feitas por meio de ONGs ou abrigos."
+      },
+      "cats": {
+        "title": "Preferência pelos felinos",
+        "content": "Os gatos representaram 65% das adoções de pets no país, indicando uma preferência crescente por felinos."
+      },
+      "radar": {
+        "title": "Aumento na Adoção de Animais",
+        "content": "A pesquisa Radar Pet 2021 revelou que 30% dos animais de estimação foram adquiridos durante o período de isolamento social."
+      }
+    },
+    "stats": {
+      "behavior": {
+        "value": "46,8%",
+        "content": "Dos cães abandonados se dá por problemas comportamentais com o animal."
+      },
+      "change": {
+        "value": "29,1%",
+        "content": "Dos animais são abandonados por causa de mudanças e disponibilidade de espaço ou nas regras de conduta social."
+      },
+      "total": {
+        "value": "30 milhões",
+        "content": "É o número estimado de animais abandonados no Brasil, sendo 20,2 milhões cães e 10 milhões gatos."
+      }
+    },
+    "benchmarkingTitle": "Antes de propor qualquer solução, precisava entender o que já existia — e mais importante: o que faltava. Mapiei os principais apps de adoção do mercado para identificar padrões, gaps e oportunidades não atendidas:",
+    "benchmarking": {
+      "category1": "Usabilidade e Fluxo de Adoção:",
+      "hyppet": [
+        "Interface intuitiva com geolocalização.",
+        "Processo de adoção simplificado, semelhante ao estilo de \"swipe\" de aplicativos de namoro.",
+        "Permite comunicação direta entre adotantes e responsáveis pelos animais."
+      ],
+      "tiutiu": [
+        "Destaque para o \"Tiutiu Tok\", permitindo visualização de vídeos dos animais.",
+        "Processo de adoção direto, com contato facilitado com os doadores.",
+        "Interface amigável e voltada para o público jovem."
+      ],
+      "petfinder": [
+        "Plataforma robusta com extensa base de dados de animais.",
+        "Filtros detalhados por localização, raça, idade, tamanho, etc.",
+        "Processo de adoção pode variar conforme a organização parceira."
+      ],
+      "werescue": [
+        "Design moderno com filtros avançados para busca de animais.",
+        "Parcerias com diversas organizações de resgate.",
+        "Processo de adoção integrado com comunicação direta com abrigos."
+      ],
+      "positives": "Avaliações Positivas:",
+      "positivesContent": [
+        [
+          "\"Fácil de usar e encontrar animais próximos.\"",
+          "\"Adorei os vídeos dos animais, muito mais envolvente.\"",
+          "\"Ótimo recurso para encontrar animais para adoção.\"",
+          "\"Aplicativo fácil de usar com ótimos filtros.\""
+        ],
+        [
+          "\"Design moderno e atrativo.\"",
+          "\"Aplicativo leve e fácil de navegar.\"",
+          "\"Interface amigável e fácil de usar.\"",
+          "\"Encontrei meu cachorro perfeito através do app.\""
+        ],
+        [
+          "\"Facilitou muito o processo de adoção.\"",
+          "\"Consegui adotar meu pet rapidamente.\"",
+          "\"Grande variedade de animais disponíveis.\"",
+          "\"Design limpo e intuitivo.\""
+        ]
+      ],
+      "negatives": "Avaliações Negativas:",
+      "negativesContent": [
+        [
+          "\"Alguns bugs ao carregar perfis de animais.\"",
+          "\"Poderia ter mais filtros de busca.\"",
+          "\"Aplicativo trava e congela frequentemente.\"",
+          "\"Falta de resposta de alguns abrigos.\""
+        ],
+        [
+          "\"Falta de informações detalhadas sobre os pets.\"",
+          "\"Alguns vídeos demoram para carregar.\"",
+          "\"Filtros de busca insuficientes.\"",
+          "\"Alguns perfis de animais desatualizados.\""
+        ],
+        [
+          "\"Notificações poderiam ser mais personalizáveis.\"",
+          "\"Faltam informações sobre o histórico dos animais.\"",
+          "\"Problemas com a lista de favoritos.\"",
+          "\"Poderia ter mais informações sobre o processo de adoção.\""
+        ]
+      ]
+    }
+  },
+  "define": {
+    "title": "Definindo o problema real",
+    "description": "Com os dados em mãos, o desafio virou sintetizar o problema real: não era apenas burocracia — era a falta de suporte emocional e prático em cada etapa da adoção. As perguntas 'How Might We' ajudaram a transformar esse problema em oportunidades de design:",
+    "hmw": [
+      "...tornar o processo de adoção mais acessível e atraente para diferentes perfis de adotantes?",
+      "...usar tecnologia para conectar cães abandonados a potenciais adotantes de forma mais eficiente?",
+      "...envolver a comunidade local para criar redes de apoio que reduzam o abandono de animais?"
+    ],
+    "povTitle": "Gerando POVs",
+    "povDesc": "Através dos POVs, consigo aprofundar o foco no problema e gerar empatia entendendo corretamente os tipos de perfis dos usuários.",
+    "povs": [
+      "O usuário precisa de uma maneira prática e segura de encontrar e adotar animais, porque ela valoriza resgates responsáveis e quer incentivar mais adoções.",
+      "O usuário precisa de canais rápidos de comunicação e suporte, porque quer se sentir confiante ao adotar um novo pet.",
+      "O usuário precisa de uma plataforma que facilite o compartilhamento em redes sociais, porque acreditam que a visibilidade aumenta as chances de adoção.",
+      "O usuário precisa de orientações no período de adaptação pós-adoção, porque quer garantir uma boa integração do animal em sua rotina.",
+      "O usuário precisa de uma forma eficiente de encontrar o pet ideal, porque quer adotar mas tem pouco tempo e busca praticidade."
+    ]
+  },
+  "idealize": {
+    "title": "Explorando caminhos e escolhendo direção",
+    "description": "Com o problema definido, era hora de explorar caminhos. Avaliei diferentes abordagens antes de convergir: a direção escolhida foi criar uma jornada guiada e conversacional, capaz de reduzir a fricção, aumentar o match de compatibilidade e sustentar o vínculo pós-adoção.",
+    "mvpTitle": "Features do MVP",
+    "features": {
+      "match": {
+        "title": "💬 Assistente de Match",
+        "content": "Sugere pets ideais com base no perfil do adotante, como rotina e espaço. Ajuda a tomar decisões conscientes."
+      },
+      "followUp": {
+        "title": "🐾 Acompanhamento Pós-Adoção",
+        "content": "Suporte contínuo com lembretes e orientações para a adaptação nos primeiros meses."
+      },
+      "guide": {
+        "title": "📚 Guia de Posse Responsável",
+        "content": "Conteúdos práticos sobre cuidados e responsabilidades, preparando o usuário para uma adoção segura."
+      },
+      "map": {
+        "title": "🗺️ Mapa de Adoção e Resgate",
+        "content": "Mostra pets, abrigos e alertas de animais em risco na região, conectando a comunidade."
+      }
+    }
+  },
+  "solution": {
+    "title": "Definindo a estrutura da experi\u00eancia",
+    "description": "Com as features definidas, organizei a arquitetura de forma que cada jornada tivesse um fluxo claro e progressivo — priorizando a adoção como fluxo central, com suporte e impacto social como camadas complementares.",
+    "ia": {
+      "title": "Arquitetura da informa\u00e7\u00e3o",
+      "desc": "Estrutura de navega\u00e7\u00e3o e hierarquia do app \u2014 organizada para facilitar o fluxo de ado\u00e7\u00e3o."
+    },
+    "flows": {
+      "title": "Fluxos do usu\u00e1rio",
+      "intro": "Antes de partir para os wireframes, mapiei os fluxos mais cr\u00edticos do produto. Esse passo \u00e9 fundamental para antecipar decis\u00f5es de componentes e garantir que a estrutura funcione antes de qualquer pixel ser desenhado.",
+      "flow1": {
+        "title": "Userflow - Login + Match de ado\u00e7\u00e3o",
+        "desc": "Jornada completa desde o login at\u00e9 o match ideal com o pet."
+      },
+      "flow2": {
+        "title": "Userflow - Processo de ado\u00e7\u00e3o",
+        "desc": "Processo simplificado para formaliza\u00e7\u00e3o do interesse de ado\u00e7\u00e3o."
+      }
+    },
+    "building": {
+      "title": "Construindo a solu\u00e7\u00e3o",
+      "intro": "Com o fluxo validado, passei para os esbo\u00e7os de baixa fidelidade das telas mais cr\u00edticas. O objetivo n\u00e3o \u00e9 precis\u00e3o visual \u2014 \u00e9 testar rapidamente se a estrutura de informa\u00e7\u00e3o faz sentido antes de investir em alto fidelidade.",
+      "lofi": {
+        "title": "Rascunhos para tirar transpor as ideias"
+      }
+    },
+    "typography": {
+      "title": "Definindo a tipografia",
+      "intro": "Escolhi a Lexend por sua excelente legibilidade em telas pequenas e pela ampla gama de pesos \u2014 de ExtraBold a Light \u2014 o que permite uma hierarquia visual clara sem precisar de fontes adicionais."
+    },
+    "colors": {
+      "title": "Paleta de cores",
+      "intro": "A paleta de cores foi definida para transmitir acolhimento, seguran\u00e7a e empatia, refor\u00e7ando o aspecto emocional da ado\u00e7\u00e3o e criando um ambiente confi\u00e1vel para o usu\u00e1rio."
+    },
+    "components": {
+      "title": "Componentes finais"
+    },
+    "result": {
+      "title": "Resultado final",
+      "p1": "O Adoc\u00e3o nasce de uma convic\u00e7\u00e3o simples: adotar bem \u00e9 t\u00e3o importante quanto adotar bastante.",
+      "p2": "A solu\u00e7\u00e3o n\u00e3o se limita a conectar pessoas e pets \u2014 ela guia cada etapa, sustenta o v\u00ednculo p\u00f3s-ado\u00e7\u00e3o e ainda serve como uma rede colaborativa de resgate. Tr\u00eas camadas de impacto, um \u00fanico produto.",
+      "mockup1": "Mockups de Onbarding e tela te login",
+      "mockup2": {
+        "title": "Mockups Assistente de ado\u00e7\u00e3o",
+        "desc": "Transformei o processo de busca em um fluxo conversacional para reduzir a fric\u00e7\u00e3o inicial e tornar a experi\u00eancia mais acolhedora. Formul\u00e1rios tradicionais podem gerar abandono em fluxos longos. O modelo de chat permite progress\u00e3o gradual, al\u00e9m de criar uma sensa\u00e7\u00e3o mais humana em um momento emocionalmente sens\u00edvel."
+      },
+      "mockup3": {
+        "title": "Home inicial + Tarefas di\u00e1rias",
+        "desc": "Criei um sistema de acompanhamento de rotina para facilitar a adapta\u00e7\u00e3o do pet e do adotante. A proposta \u00e9 reduzir ansiedade e incerteza no in\u00edcio da conviv\u00eancia, incentivando h\u00e1bitos saud\u00e1veis e consistentes."
+      },
+      "mockup4": {
+        "title": "Guia de posse",
+        "desc": "Ap\u00f3s a ado\u00e7\u00e3o, inclui uma lista guiada de itens essenciais para apoiar adotantes de primeira viagem. A decis\u00e3o surgiu da identifica\u00e7\u00e3o de uma lacuna no p\u00f3s-ado\u00e7\u00e3o, onde usu\u00e1rios frequentemente n\u00e3o sabem como preparar o ambiente para o pet."
+      },
+      "mockup5": {
+        "title": "Lista de Matches",
+        "desc": "Escolhi uma lista ranqueada em vez de intera\u00e7\u00f5es por swipe, como em apps de relacionamento, para evitar decis\u00f5es impulsivas. O modelo de swipe pode desumanizar o processo, promovendo descartes r\u00e1pidos. A lista permite uma compara\u00e7\u00e3o mais consciente, destacando a compatibilidade e ainda permitindo decis\u00f5es emocionais, que s\u00e3o essenciais na ado\u00e7\u00e3o."
+      },
+      "mockup6": {
+        "title": "Mapa de eventos",
+        "desc": "Desenvolvi um mapa colaborativo inspirado em sistemas como Waze, permitindo que usu\u00e1rios reportem animais em situa\u00e7\u00e3o de abandono e encontrem servi\u00e7os relevantes. A inten\u00e7\u00e3o foi ampliar o impacto do produto al\u00e9m da ado\u00e7\u00e3o, criando uma rede ativa de cuidado animal."
+      }
+    },
+    "prototype": {
+      "title": "Prot\u00f3tipo interativo de alta fidelidade",
+      "desc": "Explore a experi\u00eancia completa do Adoc\u00e3o diretamente no prot\u00f3tipo naveg\u00e1vel."
+    }
+  },
+  "nextSteps": {
+    "title": "O que vem a seguir",
+    "description": "Pr\u00f3ximas fases planejadas para o crescimento e autossustenta\u00e7\u00e3o do produto.",
+    "steps": [
+      {
+        "title": "Valida\u00e7\u00e3o",
+        "desc": "Realizar testes com usu\u00e1rios reais para coletar feedback e identificar pontos de melhoria na jornada 2.0."
+      },
+      {
+        "title": "Estrat\u00e9gias de monetiza\u00e7\u00e3o",
+        "desc": "Criar benef\u00edcios e parcerias que incentivem o uso cont\u00ednuo da aplica\u00e7\u00e3o e autossustenta\u00e7\u00e3o do projeto."
+      },
+      {
+        "title": "Integra\u00e7\u00e3o com veterin\u00e1rios parceiros",
+        "desc": "Oferecer servi\u00e7os integrados e descontos para assinantes, facilitando os cuidados iniciais do pet."
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "projects": "Trabalhos",
+    "about": "Sobre",
+    "faq": "FAQ",
+    "contact": "Contato",
+    "available": "Disponível"
+  },
+  "cta": {
+    "title": "Vamos para o próximo nível juntos?"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "common": {
+    "backHome": "Voltar para a Home",
+    "sections": "Seções",
+    "nextProject": "PRÓXIMO PROJETO",
+    "viewCase": "Ver case"
+  }
+}

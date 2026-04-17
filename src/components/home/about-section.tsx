@@ -3,8 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { SkillTag } from "@/components/ui/skill-tag";
+import { useTranslations } from "next-intl";
 
 export function AboutSection() {
+  const t = useTranslations('about');
   return (
     <section id="about" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-40 border-b border-border">
       <div className="grid lg:grid-cols-2 gap-24 items-center">
@@ -23,19 +25,15 @@ export function AboutSection() {
         </div>
 
         <div className="flex flex-col gap-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold text-text-primary tracking-tight">Sobre Mim</h2>
+          <h2 className="text-4xl md:text-6xl font-heading font-bold text-text-primary tracking-tight">{t('sectionTitle')}</h2>
           <div className="space-y-6 text-lg text-text-secondary leading-relaxed font-light">
-            <p>
-              Sou o Leonam, um Product Designer que une a visão estratégica do design com a pragmática do desenvolvimento front-end.
-            </p>
-            <p>
-              Foco em processos ágeis e assertivos, garantindo que cada pixel tenha um propósito funcional e que a transição do design para a engenharia seja impecável.
-            </p>
-            <p>Sou um apaixonado por tecnologia, que curte entender de tudo um pouco, desde o design até o desenvolvimento. Amo jogos, esportes e tudo que envolve criatividade e inovação.</p>
+            <p>{t('p1')}</p>
+            <p>{t('p2')}</p>
+            <p>{t('p3')}</p>
           </div>
 
           <div className="flex flex-wrap gap-3 mt-4">
-            {["UI Design", "Figma", "Design Systems", "Prototyping", "Acessibility", "UX Research", "React", "Next.js"].map(skill => (
+            {t.raw('skills').map((skill: string) => (
               <SkillTag key={skill} variant="soft">{skill}</SkillTag>
             ))}
           </div>

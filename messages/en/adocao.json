@@ -1,0 +1,261 @@
+{
+  "projectType": "Mobile App",
+  "projectName": "Adocão",
+  "title": "Adocão",
+  "subtitle": "An app that transforms responsible pet adoption into a guided journey — from the first swipe to post-adoption support.",
+  "metadata": {
+    "role": {
+      "label": "ROLE",
+      "value": "UX/UI Designer (solo)"
+    },
+    "duration": {
+      "label": "DURATION",
+      "value": "3 months"
+    },
+    "platform": {
+      "label": "PLATFORM",
+      "value": "Mobile"
+    },
+    "tools": {
+      "label": "TOOLS",
+      "value": "Figma, FigJam, ChatGPT"
+    }
+  },
+  "sections": {
+    "discover": "Understanding the ecosystem",
+    "define": "Defining the real problem",
+    "idealize": "Exploring paths",
+    "solution": "Final solution design",
+    "nextSteps": "What comes next"
+  },
+  "overview": {
+    "title": "Overview",
+    "p1": "The pet adoption process in Brazil is often long, bureaucratic, and poorly guided — causing many people to give up midway. Adocão was born to change that.",
+    "p2": "The app centralizes the entire journey: from discovering the ideal pet to post-adoption follow-up — and also functions as a collaborative rescue network, connecting the community around animals at risk."
+  },
+  "discover": {
+    "title": "Identifying the phenomenon",
+    "description": "Interest in pet adoption grew by 400% during the pandemic — a phenomenon driven by isolation and led by Generation Z. More adoptions also revealed a concerning side: abandonment grew alongside it. Research started here.",
+    "cards": {
+      "genZ": {
+        "title": "Generation Z in the Lead",
+        "content": "Young people between 18 and 24 lead adoptions, with 32% adopting pets after finding them on the streets, surpassing adoptions made through NGOs or shelters."
+      },
+      "cats": {
+        "title": "Preference for Felines",
+        "content": "Cats represented 65% of pet adoptions in the country, indicating a growing preference for felines."
+      },
+      "radar": {
+        "title": "Increase in Animal Adoption",
+        "content": "The Radar Pet 2021 survey revealed that 30% of pets were acquired during the social isolation period."
+      }
+    },
+    "stats": {
+      "behavior": {
+        "value": "46.8%",
+        "content": "Of abandoned dogs is due to behavioral problems with the animal."
+      },
+      "change": {
+        "value": "29.1%",
+        "content": "Of animals are abandoned because of changes and availability of space or rules of social conduct."
+      },
+      "total": {
+        "value": "30 million",
+        "content": "Estimated number of abandoned animals in Brazil, with 20.2 million dogs and 10 million cats."
+      }
+    },
+    "benchmarkingTitle": "Before proposing any solution, I needed to understand what already existed — and more importantly: what was missing. I mapped the main adoption apps on the market to identify patterns, gaps, and unmet opportunities:",
+    "benchmarking": {
+      "category1": "Usability and Adoption Flow:",
+      "hyppet": [
+        "Intuitive interface with geolocation.",
+        "Simplified adoption process, similar to the \"swipe\" style of dating apps.",
+        "Allows direct communication between adopters and those responsible for the animals."
+      ],
+      "tiutiu": [
+        "Highlight for \"Tiutiu Tok\", allowing viewing of animal videos.",
+        "Direct adoption process, with easy contact with donors.",
+        "Friendly interface targeted at a young audience."
+      ],
+      "petfinder": [
+        "Robust platform with extensive database of animals.",
+        "Detailed filters by location, breed, age, size, etc.",
+        "Adoption process may vary according to the partner organization."
+      ],
+      "werescue": [
+        "Modern design with advanced filters for animal search.",
+        "Partnerships with various rescue organizations.",
+        "Integrated adoption process with direct communication with shelters."
+      ],
+      "positives": "Positive Reviews:",
+      "positivesContent": [
+        [
+          "\"Easy to use and find nearby animals.\"",
+          "\"Loved the animal videos, much more engaging.\"",
+          "\"Great resource for finding animals for adoption.\"",
+          "\"Easy to use app with great filters.\""
+        ],
+        [
+          "\"Modern and attractive design.\"",
+          "\"Lightweight app and easy to navigate.\"",
+          "\"Friendly and easy to use interface.\"",
+          "\"Found my perfect dog through the app.\""
+        ],
+        [
+          "\"Greatly facilitated the adoption process.\"",
+          "\"Managed to adopt my pet quickly.\"",
+          "\"Wide variety of animals available.\"",
+          "\"Clean and intuitive design.\""
+        ]
+      ],
+      "negatives": "Negative Reviews:",
+      "negativesContent": [
+        [
+          "\"Some bugs when loading animal profiles.\"",
+          "\"Could have more search filters.\"",
+          "\"App crashes and freezes frequently.\"",
+          "\"Lack of response from some shelters.\""
+        ],
+        [
+          "\"Lack of detailed information about the pets.\"",
+          "\"Some videos take time to load.\"",
+          "\"Insufficient search filters.\"",
+          "\"Some animal profiles are outdated.\""
+        ],
+        [
+          "\"Notifications could be more customizable.\"",
+          "\"Lack of information on animal history.\"",
+          "\"Problems with the favorites list.\"",
+          "\"Could have more information about the adoption process.\""
+        ]
+      ]
+    }
+  },
+  "define": {
+    "title": "Defining the real problem",
+    "description": "With the data in hand, the challenge became synthesizing the real problem: it wasn't just bureaucracy — it was the lack of emotional and practical support at each stage of adoption. The 'How Might We' questions helped turn this problem into design opportunities:",
+    "hmw": [
+      "...make the adoption process more accessible and attractive for different adopter profiles?",
+      "...use technology to connect abandoned dogs to potential adopters more efficiently?",
+      "...involve the local community to create support networks that reduce animal abandonment?"
+    ],
+    "povTitle": "Generating POVs",
+    "povDesc": "Through POVs, I can deepen the focus on the problem and generate empathy by correctly understanding the types of user profiles.",
+    "povs": [
+      "The user needs a practical and safe way to find and adopt animals, because she values responsible rescues and wants to encourage more adoptions.",
+      "The user needs fast communication channels and support, because they want to feel confident when adopting a new pet.",
+      "The user needs a platform that facilitates sharing on social networks, because they believe that visibility increases the chances of adoption.",
+      "The user needs guidance during the post-adoption adaptation period, because they want to ensure good integration of the animal into their routine.",
+      "The user needs an efficient way to find the ideal pet, because they want to adopt but have little time and seek practicality."
+    ]
+  },
+  "idealize": {
+    "title": "Exploring paths and choosing direction",
+    "description": "With the problem defined, it was time to explore paths. I evaluated different approaches before converging: the chosen direction was to create a guided and conversational journey, capable of reducing friction, increasing compatibility match, and sustaining the post-adoption bond.",
+    "mvpTitle": "MVP Features",
+    "features": {
+      "match": {
+        "title": "💬 Match Assistant",
+        "content": "Suggests ideal pets based on the adopter's profile, such as routine and space. Helps in making conscious decisions."
+      },
+      "followUp": {
+        "title": "🐾 Post-Adoption Follow-up",
+        "content": "Continuous support with reminders and guidance for adaptation in the first months."
+      },
+      "guide": {
+        "title": "📚 Responsible Ownership Guide",
+        "content": "Practical content on care and responsibilities, preparing the user for a safe adoption."
+      },
+      "map": {
+        "title": "🗺️ Adoption and Rescue Map",
+        "content": "Shows pets, shelters, and animal-at-risk alerts in the region, connecting the community."
+      }
+    }
+  },
+  "solution": {
+    "title": "Defining the structure of the experience",
+    "description": "With the features defined, I organized the architecture so that each journey had a clear and progressive flow — prioritizing adoption as the central flow, with support and social impact as complementary layers.",
+    "ia": {
+      "title": "Information architecture",
+      "desc": "App navigation structure and hierarchy — organized to facilitate the adoption flow."
+    },
+    "flows": {
+      "title": "User flows",
+      "intro": "Before starting with the wireframes, I mapped the most critical product flows. This step is fundamental to anticipate component decisions and ensure the structure works before any pixel is drawn.",
+      "flow1": {
+        "title": "User flow - Login + Adoption Match",
+        "desc": "Complete journey from login to the ideal match with the pet."
+      },
+      "flow2": {
+        "title": "User flow - Adoption process",
+        "desc": "Simplified process for formalizing adoption interest."
+      }
+    },
+    "building": {
+      "title": "Building the solution",
+      "intro": "With the flow validated, I moved on to low-fidelity sketches of the most critical screens. The goal is not visual precision — it's to quickly test if the information structure makes sense before investing in high-fidelity.",
+      "lofi": {
+        "title": "Sketches to transpose ideas"
+      }
+    },
+    "typography": {
+      "title": "Defining the typography",
+      "intro": "I chose Lexend for its excellent readability on small screens and for the wide range of weights — from ExtraBold to Light — which allows a clear visual hierarchy without needing additional fonts."
+    },
+    "colors": {
+      "title": "Color palette",
+      "intro": "The color palette was defined to convey warmth, safety, and empathy, reinforcing the emotional aspect of adoption and creating a reliable environment for the user."
+    },
+    "components": {
+      "title": "Final components"
+    },
+    "result": {
+      "title": "Final result",
+      "p1": "Adocão is born from a simple conviction: adopting well is as important as adopting a lot.",
+      "p2": "The solution is not limited to connecting people and pets — it guides each stage, sustains the post-adoption bond, and still serves as a collaborative rescue network. Three layers of impact, a single product.",
+      "mockup1": "Onboarding and login screen mockups",
+      "mockup2": {
+        "title": "Adoption Assistant Mockups",
+        "desc": "I transformed the search process into a conversational flow to reduce initial friction and make the experience more welcoming. Traditional forms can lead to abandonment in long flows. The chat model allows gradual progression, as well as creating a more human feel at an emotionally sensitive time."
+      },
+      "mockup3": {
+        "title": "Initial home + Daily tasks",
+        "desc": "I created a routine monitoring system to facilitate the adaptation of the pet and the adopter. The proposal is to reduce anxiety and uncertainty at the beginning of cohabitation, encouraging healthy and consistent habits."
+      },
+      "mockup4": {
+        "title": "Ownership guide",
+        "desc": "After adoption, I included a guided list of essential items to support first-time adopters. The decision arose from the identification of a gap in post-adoption, where users often don't know how to prepare the environment for the pet."
+      },
+      "mockup5": {
+        "title": "Match List",
+        "desc": "I chose a ranked list instead of swipe interactions, as in dating apps, to avoid impulsive decisions. The swipe model can dehumanize the process, promoting quick dismissals. The list allows for a more conscious comparison, highlighting compatibility while still allowing emotional decisions, which are essential in adoption."
+      },
+      "mockup6": {
+        "title": "Event Map",
+        "desc": "I developed a collaborative map inspired by systems like Waze, allowing users to report abandoned animals and find relevant services. The intent was to broaden the product's impact beyond adoption, creating an active network of animal care."
+      }
+    },
+    "prototype": {
+      "title": "High-fidelity interactive prototype",
+      "desc": "Explore the complete Adocão experience directly in the navigable prototype."
+    }
+  },
+  "nextSteps": {
+    "title": "What comes next",
+    "description": "Next planned phases for the growth and self-sustainability of the product.",
+    "steps": [
+      {
+        "title": "Validation",
+        "desc": "Conduct tests with real users to gather feedback and identify improvement points in journey 2.0."
+      },
+      {
+        "title": "Monetization strategies",
+        "desc": "Create benefits and partnerships that encourage continued use of the application and self-sustainability of the project."
+      },
+      {
+        "title": "Integration with partner veterinarians",
+        "desc": "Offer integrated services and discounts for subscribers, facilitating initial pet care."
+      }
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "projectType": "Web App",
+  "projectName": "Core System",
+  "title": "Core System",
+  "subtitle": "Bringing clarity to decision-making in pension management processes.",
+  "confidentiality": "\u201cSome details have been adapted or omitted for confidentiality reasons, keeping the focus on the design challenges and proposed solutions.\u201d",
+  "metadata": {
+    "role": {
+      "label": "ROLE",
+      "value": "UX/UI Designer"
+    },
+    "duration": {
+      "label": "DURATION",
+      "value": "3 months"
+    },
+    "platform": {
+      "label": "PLATFORM",
+      "value": "Web / Desktop"
+    },
+    "tools": {
+      "label": "TOOLS",
+      "value": "Figma, FigJam"
+    }
+  },
+  "sections": {
+    "discover": "Identifying gaps",
+    "define": "Defining gaps",
+    "solution": "Final solution design",
+    "results": "Results and impact",
+    "nextSteps": "What comes next"
+  },
+  "overview": {
+    "title": "Overview",
+    "p1": "Core System is the central platform responsible for managing complex processes related to pension and retirement management.",
+    "p2": "The challenge of this project was to transform an already defined structure into a clear interface, reducing operational complexity and increasing user confidence."
+  },
+  "role": {
+    "title": "My role in the team",
+    "p1": "Acted as UX/UI Designer, responsible for transforming the existing architecture into a clear, consistent, and usable interface.",
+    "p2": "Worked on building final screens and prototypes used for both user validation and product communication.",
+    "p3": "The project was developed in collaboration with a multidisciplinary team, including a period of on-site work in Switzerland."
+  },
+  "discover": {
+    "title": "Identifying the gaps",
+    "description": "The project consists of features such as: Dashboard, Inbox (received document management), and Case Processing. Based on the analysis of the existing system and usability test results, I identified critical points that impacted users' understanding and workflow.",
+    "dashboard": {
+      "title": "In the Dashboard",
+      "gaps": [
+        "Lack of direct action (they want to click and go to inbox)",
+        "Some low-relevance metrics"
+      ]
+    },
+    "inbox": {
+      "title": "In the Inbox",
+      "gaps": [
+        "Expectation of creating something new (not just processing)",
+        "Inbox concept is not entirely clear"
+      ]
+    },
+    "processing": {
+      "title": "Case processing",
+      "gaps": [
+        "The system lacks good feedback for what has been performed",
+        "Lack of actions for users to confirm that steps have been completed"
+      ]
+    },
+    "automation": "Furthermore, regarding automation, it was observed that:",
+    "cards": [
+      "Mental model exists, but is not being communicated by the UI",
+      "Automation is good, but doesn't pass full confidence",
+      "The product is functionally good, but emotionally insecure"
+    ],
+    "evident": "After analysis of the results, it became evident that:",
+    "findings": [
+      "The system presents high visual clarity and operational efficiency, but fails in initial orientation and confidence building.",
+      "Users understand the flows after explanation, indicating a misalignment between the mental model and the interface.",
+      "The largest opportunity lies in making automation transparent and guided, without removing the user's sense of control."
+    ]
+  },
+  "define": {
+    "title": "Defining the problem gaps",
+    "description": "After analysis of the results, it became evident that:",
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Problems",
+      "cards": [
+        "The dashboard does not guide the user to their primary task, making the initial workflow direction difficult",
+        "The lack of clear visual hierarchy generates uncertainty about priorities, impacting decision-making"
+      ]
+    },
+    "inbox": {
+      "title": "Inbox",
+      "subtitle": "Problems",
+      "cards": [
+        "Low contrast and absence of patterns make it difficult to identify interactive elements and understand how to execute actions in the system",
+        "Prioritization of areas without a clear function diverts user attention, increasing friction at the beginning of the journey",
+        "Visual organization does not properly communicate the workflow, making it difficult to understand the process as a whole"
+      ]
+    },
+    "management": {
+      "title": "Case management",
+      "subtitle": "Problems",
+      "cards": [
+        "The flow is not correctly demonstrated, causing confusion about what actually needs to be done currently.",
+        "Despite visual statuses of what needs to be done and what is ready, it's still confusing which actions to take within the system, generating insecurity."
+      ]
+    }
+  },
+  "solution": {
+    "title": "Redefining the visual structure",
+    "cards": [
+      "I directed user attention to primary actions through visual hierarchy and design system consistency",
+      "I structured the flow in a clear and progressive way, guiding the user through the process stages",
+      "I made interactive elements and states more evident, reducing ambiguity and errors",
+      "I introduced direct and contextual interactions, increasing efficiency and reducing unnecessary navigation",
+      "I increased focus on the active task with visual feedback and motion, reducing distractions",
+      "I reinforced transparency and control with clear states, validations, and action feedback"
+    ]
+  },
+  "results": {
+    "title": "Results and impact",
+    "description": "After implementing the improvements, tests indicated significant progress in system understanding and task execution.",
+    "dashboardInbox": {
+      "title": "Dashboard and Inbox"
+    },
+    "caseManager": {
+      "title": "Gerenciador de casos"
+    },
+    "labels": {
+      "improvements": "Improvements",
+      "attention": "Points of attention"
+    },
+    "improvements": [
+      "The flow became clearer for most users",
+      "Inbox is recognized as a place for tasks",
+      "Pending task list is perceived",
+      "General structure understood",
+      "\"Process data\" action is understood",
+      "Users are able to advance in the flow"
+    ],
+    "attentions": [
+      "Personal vs shared inbox",
+      "What is directly editable",
+      "Visual states (gray) are not initially clear",
+      "Some data still lacks context",
+      "Difficulty identifying the current status of the case"
+    ],
+    "overall": {
+      "score": "Overall test rating: 8 out of 10",
+      "desc": "The system showed high efficiency and fast learning, allowing users to perform complex tasks quickly. However, it fails in guiding critical decisions and onboarding, resulting in inconsistencies. Data transparency, as in the transaction list, was a key factor for confidence and usability."
+    }
+  },
+  "nextSteps": {
+    "title": "What comes next",
+    "description": "Based on the learnings from the second cycle of tests, opportunities were identified to evolve the system in terms of orientation, confidence, and robustness.",
+    "steps": [
+      "Refine the initial user experience, making available actions and the path forward clearer from the first contact with the system.",
+      "Evolve how the system communicates automations and decisions, offering greater visibility into what is happening and allowing user validation.",
+      "Make states, confirmations, and feedback more consistent across the interface, ensuring the user clearly understands the progress and impact of their actions.",
+      "Evolve the system to better handle more complex cases and exceptions, ensuring consistency even in situations outside the standard flow."
+    ]
+  }
+}

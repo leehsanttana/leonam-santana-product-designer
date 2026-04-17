@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "location": "Rio de Janeiro, Brasil",
+    "since": "Desde 2020",
+    "title1": "Product",
+    "title2": "Designer",
+    "subtitle": "Crio soluções digitais que equilibram <span className=\"text-text-primary font-medium\">estética</span> e <span className=\"text-text-primary font-medium\">usabilidade</span> para resolver problemas reais e gerar impacto no negócio.",
+    "viewProjects": "Ver Projetos",
+    "contact": "Contato"
+  },
+  "projects": {
+    "sectionTitle": "Trabalhos Selecionados",
+    "hoverInstruction": "Passe o mouse <br /> em um projeto",
+    "list": {
+      "core-system": {
+        "type": "Web App • WealthTech • 2024"
+      },
+      "adocao": {
+        "type": "Mobile App • Saúde • 2025"
+      },
+      "viajaflux": {
+        "type": "Mobile App • Viagens • 2023"
+      },
+      "medschool": {
+        "type": "Web App • Educação • 2024"
+      }
+    }
+  },
+  "about": {
+    "sectionTitle": "Sobre Mim",
+    "p1": "Sou o Leonam, um Product Designer que une a visão estratégica do design com a pragmática do desenvolvimento front-end.",
+    "p2": "Foco em processos ágeis e assertivos, garantindo que cada pixel tenha um propósito funcional e que a transição do design para a engenharia seja impecável.",
+    "p3": "Sou um apaixonado por tecnologia, que curte entender de tudo um pouco, desde o design até o desenvolvimento. Amo jogos, esportes e tudo que envolve criatividade e inovação.",
+    "skills": [
+      "UI Design",
+      "Figma",
+      "Design Systems",
+      "Prototipagem",
+      "Acessibilidade",
+      "UX Research",
+      "React",
+      "Next.js"
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Perguntas frequentes",
+    "subtitle": "Tudo que você quer saber antes de entrar em contato.",
+    "q1": {
+      "question": "Como você estrutura seu processo de design?",
+      "answer": "Trabalho com processos enxutos e ágeis, focando em entregar valor rapidamente através de ciclos de descoberta e validação constantes, garantindo que o design evolua junto com o produto."
+    },
+    "q2": {
+      "question": "Quais ferramentas você usa?",
+      "answer": "Minha ferramenta principal é o Figma, onde desenvolvo meus designs e ideias. Para prototipagem, utilizo figma ou uso IAs para auxiliar no processo. Tenho prática com ferramentas como Notion ou confluence para documentação e organização de projetos. No desenvolvimento, utilizo como base o React e o Next.js."
+    },
+    "q3": {
+      "question": "Você trabalha remotamente?",
+      "answer": "Sim, tenho uma estrutura completa para colaboração assíncrona e reuniões em tempo real, mas com possibilidade de trabalho presencial caso houver a necessidade."
+    }
+  }
+}
