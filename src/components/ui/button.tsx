@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-accent-pink/15 text-[#f7cffe] border border-accent-pink/20 hover:bg-accent-pink/25 transition-all",
+        default: "bg-accent-pink/18 text-[#F7CFFE] border border-accent-pink/20 hover:bg-accent-pink/35 transition-all",
         destructive:
           "bg-accent-red/20 text-accent-red border border-accent-red/30 hover:bg-accent-red/30",
         outline:
           "border border-border bg-transparent hover:bg-white/5 text-text-primary",
         secondary:
-          "text-text-secondary border border-border hover:bg-white/5 text-text-primary",
+          "text-text-secondary bg-white/1 border border-border hover:bg-white/8 text-text-primary",
         ghost: "hover:bg-white/5 text-text-secondary hover:text-text-primary",
         link: "text-accent-pink underline-offset-4 hover:underline",
         cyan: "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20",

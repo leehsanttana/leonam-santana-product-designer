@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
   ];
 
   return (
-    <div className="absolute top-8 right-8 z-[100] flex items-center bg-bg-elevated/80 backdrop-blur-md border border-border p-1 rounded-full shadow-2xl">
+    <div className="hidden md:flex absolute top-8 right-8 z-[100] items-center bg-bg-elevated/80 backdrop-blur-md border border-border p-1 rounded-full shadow-2xl">
       <div className="flex items-center relative gap-1">
         {locales.map((l) => {
           const isActive = locale === l.id;

@@ -8,17 +8,23 @@ import { useTranslations } from "next-intl";
 
 export function ProjectsSection() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [mobileIndex, setMobileIndex] = useState(0);
   const activeProject = PROJECTS.find(p => p.id === hoveredId);
   const t = useTranslations('projects');
 
+  const handleNext = () => setMobileIndex((prev) => (prev + 1) % PROJECTS.length);
+  const handlePrev = () => setMobileIndex((prev) => (prev - 1 + PROJECTS.length) % PROJECTS.length);
+
+  const mobileProject = PROJECTS[mobileIndex];
+
   return (
-    <section id="projects" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-32 border-b border-border">
+    <section id="projects" className="container mx-auto px-4 max-w-[1440px] py-8 lg:py-32 border-b border-border">
       <div className="flex flex-col gap-12">
         <h2 className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted">{t('sectionTitle')}</h2>
 
         <div className="flex flex-col lg:flex-row gap-24 items-start">
-          {/* Projects List */}
-          <div className="flex-1 flex flex-col w-full">
+          {/* Desktop Projects List */}
+          <div className="hidden lg:flex flex-1 flex-col w-full">
             {PROJECTS.map((project) => (
               <Link
                 key={project.id}
@@ -48,6 +54,80 @@ export function ProjectsSection() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Mobile Projects Slider */}
+          <div className="block lg:hidden w-full relative">
+            <div className="w-full flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={mobileIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col gap-6"
+                >
+                  <Link href={mobileProject.disabled ? "#" : mobileProject.href} className="block w-full group">
+                    <div className="flex flex-col gap-6">
+                      <div className="relative w-full aspect-[4/5] bg-bg-subtle rounded-[24px] overflow-hidden border border-border shadow-sm">
+                        <img
+                          src={mobileProject.image}
+                          alt={mobileProject.title}
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                        />
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex flex-col gap-1">
+                          <span className="text-[12px] font-medium tracking-wider text-accent-cyan uppercase">
+                            {t(`list.${mobileProject.slug}.type`)}
+                          </span>
+                          <h3 className="text-2xl font-heading font-bold text-text-primary">
+                            {mobileProject.title}
+                          </h3>
+                        </div>
+                        {!mobileProject.disabled && (
+                          <div className="w-10 h-10 shrink-0 rounded-full border border-border bg-bg-elevated flex items-center justify-center text-text-primary group-hover:border-accent-pink group-hover:bg-accent-pink/10 transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:text-accent-pink transition-colors">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Slider Controls */}
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <button
+                  onClick={handlePrev}
+                  className="w-12 h-12 rounded-full border border-border bg-bg-elevated flex items-center justify-center text-text-primary hover:bg-white/5 transition-colors"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <div className="flex gap-2">
+                  {PROJECTS.map((_, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-2 h-2 rounded-full transition-colors ${idx === mobileIndex ? 'bg-accent-cyan' : 'bg-border'}`}
+                    />
+                  ))}
+                </div>
+                <button
+                  onClick={handleNext}
+                  className="w-12 h-12 rounded-full border border-border bg-bg-elevated flex items-center justify-center text-text-primary hover:bg-white/5 transition-colors"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Project Viewer (Right Column) */}

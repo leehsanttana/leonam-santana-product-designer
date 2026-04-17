@@ -5,6 +5,7 @@ export interface Project {
   type: string;
   href: string;
   image: string;
+  imageAlt: string;
   disabled?: boolean;
 }
 
@@ -16,7 +17,8 @@ export const PROJECTS: Project[] = [
     type: "Web App • WealthTech • 2024",
     href: "/projects/core-system",
     disabled: false,
-    image: "/Core-system-case/core-system-project-banner.jpg"
+    image: "/Core-system-case/core-system-project-banner.jpg",
+    imageAlt: "/Core-system-case/core-system-banner.jpg"
   },
   {
     id: "02",
@@ -24,7 +26,8 @@ export const PROJECTS: Project[] = [
     title: "Adocão",
     type: "Mobile App • Health • 2025",
     href: "/projects/adocao",
-    image: "/Adocao-case/adocao-project-banner.jpg"
+    image: "/Adocao-case/adocao-project-banner.jpg",
+    imageAlt: "/Adocao-case/adocao-banner.jpg"
   },
   {
     id: "03",
@@ -33,7 +36,8 @@ export const PROJECTS: Project[] = [
     type: "Mobile App • Viagens • 2023",
     href: "#",
     disabled: true,
-    image: "https://placehold.co/600x800/221e30/ede8f7?text=Viajaflux"
+    image: "/viajaflux-project-banner.jpg",
+    imageAlt: "/viajaflux-project-banner.jpg"
   },
   {
     id: "04",
@@ -42,6 +46,7 @@ export const PROJECTS: Project[] = [
     type: "Web App • Educação • 2024",
     href: "#",
     disabled: true,
-    image: "https://placehold.co/600x800/221e30/ede8f7?text=MedSchool"
+    image: "/med4school-project-banner.jpg",
+    imageAlt: "/med4school-project-banner.jpg"
   },
 ];

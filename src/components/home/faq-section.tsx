@@ -15,13 +15,13 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="container mx-auto px-4 sm:px-8 max-w-[920px] py-40 border-b border-border">
+    <section id="faq" className="container mx-auto px-4 max-w-[920px] py-8 lg:py-32 border-b border-border">
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <h2 className="text-[28px] font-heading font-bold text-text-primary leading-[1.2]">
             {t('sectionTitle')}
           </h2>
-          <p className="text-lg text-text-secondary font-light">
+          <p className="text-base md:text-lg text-text-secondary font-light">
             {t('subtitle')}
           </p>
         </div>

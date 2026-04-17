@@ -3,6 +3,7 @@
 import React from "react";
 import { CaseLayout } from "@/components/case/shared/CaseLayout";
 import { CaseTitleHeader } from "@/components/case/shared/CaseTitleHeader";
+import { cn } from "@/lib/utils";
 import { ImageCard } from "@/components/case/shared/ImageCard";
 import { DiscoverRenderer } from "@/components/case/renderers/DiscoverRenderer";
 import { DefineRenderer } from "@/components/case/renderers/DefineRenderer";
@@ -388,11 +389,11 @@ export default function AdocaoCase() {
       >
         <div className="space-y-4">
           {[0, 1, 2].map((i) => (
-            <div key={i} className="p-6 rounded-2xl bg-bg-elevated border border-border flex gap-6 items-start">
-              <span className="text-accent-cyan text-2xl font-heading font-bold">0{i + 1}</span>
+            <div key={i} className="p-4 md:p-6 rounded-2xl bg-bg-elevated border border-border flex gap-4 md:gap-6 items-start">
+              <span className="text-accent-cyan text-xl md:text-2xl font-heading font-bold">0{i + 1}</span>
               <div>
-                <h4 className="text-text-primary text-lg font-medium mb-1">{t(`nextSteps.steps.${i}.title`)}</h4>
-                <p className="text-text-secondary font-light">{t(`nextSteps.steps.${i}.desc`)}</p>
+                <h4 className="text-text-primary text-base md:text-lg font-medium mb-1">{t(`nextSteps.steps.${i}.title`)}</h4>
+                <p className="text-text-secondary font-light text-[14px] md:text-base leading-relaxed">{t(`nextSteps.steps.${i}.desc`)}</p>
               </div>
             </div>
           ))}
@@ -405,33 +406,53 @@ export default function AdocaoCase() {
         const nextProject = PROJECTS[(currentIndex + 1) % PROJECTS.length];
 
         return (
-          <Link
-            href={nextProject.href as any}
-            className={`mt-12 relative block rounded-[24px] overflow-hidden group border border-border ${nextProject.disabled ? 'pointer-events-none opacity-40' : 'cursor-pointer'}`}
-          >
-            <div className="w-full relative h-[300px]">
-              <img
-                src={nextProject.image}
-                alt={nextProject.title}
-                className="object-cover w-full h-full opacity-40 group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
-                <div className="absolute bottom-10 left-10">
-                  <span className="text-body-04 text-text-muted mb-2 block">{tc("nextProject")}</span>
-                  <h2 className="text-3xl font-heading font-bold text-text-primary mb-1">{nextProject.title}</h2>
-                  <p className="text-text-secondary font-light">{tp(`list.${nextProject.slug}.type`)}</p>
+          <div className="mt-20 border-t border-border pt-12">
+            <span className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted mb-8 block">
+              {tc("nextProject")}
+            </span>
+
+            <Link
+              href={nextProject.href as any}
+              className={cn(
+                "group block w-full",
+                nextProject.disabled && "pointer-events-none opacity-40"
+              )}
+            >
+              <div className="flex flex-col gap-6">
+                {/* Image Container */}
+                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-bg-subtle rounded-[24px] overflow-hidden border border-border">
+                  <img
+                    src={nextProject.imageAlt}
+                    alt={nextProject.title}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg/20 to-transparent" />
                 </div>
-                <div className="absolute bottom-10 right-10 w-12 h-12 rounded-full border border-accent-pink/30 bg-accent-pink/10 flex items-center justify-center group-hover:bg-accent-pink/20 transition-colors">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-pink">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
+
+                {/* Content Below */}
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[12px] font-medium tracking-wider text-accent-pink uppercase">
+                      {tp(`list.${nextProject.slug}.type`)}
+                    </span>
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-text-primary">
+                      {nextProject.title}
+                    </h3>
+                  </div>
+
+                  <div className="w-12 h-12 rounded-full border border-border bg-bg-elevated flex items-center justify-center text-text-primary group-hover:border-accent-pink group-hover:bg-accent-pink/10 transition-all">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:text-accent-pink transition-colors">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
                 </div>
               </div>
-          </Link>
+            </Link>
+          </div>
         );
-        })()}
-      </CaseLayout>
-    );
-  }
+      })()}
+    </CaseLayout>
+  );
+}
 

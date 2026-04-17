@@ -50,10 +50,10 @@ export function TypographyCard() {
   ];
 
   return (
-    <div className="bg-bg-elevated border border-border rounded-2xl p-8 mb-12">
+    <div className="bg-bg-elevated border border-border rounded-2xl p-4 md:p-8 mb-12">
       <div className="flex justify-between items-start mb-12">
-        <span className="text-[64px] font-extrabold text-text-primary leading-none">Aa</span>
-        <span className="text-[18px] font-normal text-text-primary">Fonte : Lexend</span>
+        <span className="text-4xl md:text-[64px] font-extrabold text-text-primary leading-none">Aa</span>
+        <span className="text-base md:text-[18px] font-normal text-text-primary">Fonte : Lexend</span>
       </div>
 
       <div className="overflow-x-auto">

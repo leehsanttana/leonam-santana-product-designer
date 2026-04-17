@@ -19,12 +19,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Leonam Santana | Portfolio",
-  description: "Portfólio de Product Designer de Leonam Santana.",
+  title: "Leonam Santana | Product Designer",
+  description: "Transformo complexidade em interfaces simples, combinando UI, prototipação e design systems.",
+  icons: {
+    icon: "/Favicon.svg",
+  },
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
@@ -44,7 +47,7 @@ export default async function RootLayout({
       className={`${lexend.variable} ${spaceGrotesk.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground scroll-smooth">
+      <body className="min-h-full flex flex-col font-sans bg-background text-foreground scroll-smooth overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <LanguageSwitcher />
           <Navbar />

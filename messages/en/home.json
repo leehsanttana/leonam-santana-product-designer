@@ -6,7 +6,7 @@
     "title2": "Designer",
     "subtitle": "I create digital solutions that balance <span className=\"text-text-primary font-medium\">aesthetics</span> and <span className=\"text-text-primary font-medium\">usability</span> to solve real problems and generate business impact.",
     "viewProjects": "View Projects",
-    "contact": "Contact"
+    "resume": "My resume"
   },
   "projects": {
     "sectionTitle": "Selected Work",

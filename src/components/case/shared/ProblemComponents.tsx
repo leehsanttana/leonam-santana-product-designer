@@ -15,13 +15,13 @@ export function POVCard({ quote, color, className }: POVCardProps) {
   return (
     <div
       className={cn(
-        "p-8 rounded-2xl bg-bg-elevated border-y border-r border-border",
+        "p-4 md:p-8 rounded-2xl bg-bg-elevated border-y border-r border-border",
         !color && "border-l-4 border-l-accent-yellow",
         className
       )}
       style={borderStyle}
     >
-      <p className="text-text-primary text-[18px] leading-relaxed font-light italic">
+      <p className="text-text-primary text-base md:text-[18px] leading-relaxed font-light italic">
         &ldquo;{quote}&rdquo;
       </p>
     </div>
@@ -37,12 +37,12 @@ export function HowMightWeCard({ question, color }: HowMightWeCardProps) {
   const textStyle = color ? { color } : undefined;
 
   return (
-    <div className="p-6 rounded-2xl bg-bg-elevated border border-border">
+    <div className="p-4 md:p-6 rounded-2xl bg-bg-elevated border border-border">
       <span className="text-xs text-text-muted tracking-[2px] uppercase block mb-2">
         COMO PODERÍAMOS...
       </span>
       <p
-        className={cn("text-lg font-light leading-relaxed", !color && "text-accent-yellow")}
+        className={cn("text-base md:text-lg font-light leading-relaxed", !color && "text-accent-yellow")}
         style={textStyle}
       >
         {question}

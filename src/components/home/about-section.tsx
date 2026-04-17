@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 export function AboutSection() {
   const t = useTranslations('about');
   return (
-    <section id="about" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-40 border-b border-border">
+    <section id="about" className="container mx-auto px-4 max-w-[1440px] py-8 lg:py-32 border-b border-border">
       <div className="grid lg:grid-cols-2 gap-24 items-center">
         <div className="relative">
           <div className="aspect-[4/5] rounded-[2rem] bg-bg-subtle overflow-hidden border border-border shadow-2xl relative z-10">
@@ -26,7 +26,7 @@ export function AboutSection() {
 
         <div className="flex flex-col gap-10">
           <h2 className="text-4xl md:text-6xl font-heading font-bold text-text-primary tracking-tight">{t('sectionTitle')}</h2>
-          <div className="space-y-6 text-lg text-text-secondary leading-relaxed font-light">
+          <div className="space-y-6 text-base md:text-lg text-text-secondary leading-relaxed font-light">
             <p>{t('p1')}</p>
             <p>{t('p2')}</p>
             <p>{t('p3')}</p>

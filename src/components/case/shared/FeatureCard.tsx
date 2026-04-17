@@ -11,9 +11,9 @@ export function FeatureCard({ title, content, color }: FeatureCardProps) {
   const textStyle = color ? { color } : undefined;
 
   return (
-    <div className="p-6 rounded-2xl bg-bg-elevated border border-border flex flex-col gap-3 group hover:border-border/60 transition-all">
+    <div className="p-4 md:p-6 rounded-2xl bg-bg-elevated border border-border flex flex-col gap-3 group hover:border-border/60 transition-all">
       <h4
-        className={cn("text-lg font-normal", !color && "text-accent-orange")}
+        className={cn("text-base md:text-lg font-normal", !color && "text-accent-orange")}
         style={textStyle}
       >
         {title}

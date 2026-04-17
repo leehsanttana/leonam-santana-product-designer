@@ -22,7 +22,7 @@ export function FaqCard({ question, answer, isOpen, onClick }: FaqCardProps) {
         onClick={onClick}
         className="w-full flex items-center justify-between p-6 md:p-8 text-left group"
       >
-        <span className={`text-lg font-light transition-colors ${isOpen ? "text-text-primary" : "text-text-secondary group-hover:text-text-primary"
+        <span className={`text-base md:text-lg font-light transition-colors ${isOpen ? "text-text-primary" : "text-text-secondary group-hover:text-text-primary"
           }`}>
           {question}
         </span>

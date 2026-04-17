@@ -2,15 +2,18 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export function CTASection() {
   const t = useTranslations('cta');
-  return (
-    <section id="contact" className="container mx-auto px-4 sm:px-8 max-w-[1440px] py-40">
-      <div className="bg-bg-elevated border border-border p-12 md:p-14 lg:p-16 rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl group">
+  const locale = useLocale();
+  const cvLink = locale === 'en' ? '/CV-Leonam-Santana-EN.pdf' : '/CV-Leonam-Santana-PT.pdf';
 
-        <h2 className="text-[40px] md:text-[56px] font-heading font-bold tracking-[-3px] text-text-primary leading-[1.1] max-w-md">
+  return (
+    <section id="contact" className="container mx-auto px-4 max-w-[1440px] py-8 lg:py-32">
+      <div className="bg-bg-elevated border border-border p-6 md:p-12 lg:p-16 rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl group">
+
+        <h2 className="text-[32px] md:text-[56px] font-heading font-bold tracking-[-3px] text-text-primary leading-[1.1] max-w-md">
           {t('title')}
         </h2>
 
@@ -29,9 +32,10 @@ export function CTASection() {
           {/* Social Links Row */}
           <div className="flex items-center gap-3">
             {[
-              { icon: "linkedin", href: "#" },
-              { icon: "instagram", href: "#" },
-              { icon: "cv", href: "#" },
+              { icon: "whatsapp", href: "https://wa.me/5521976370007" },
+              { icon: "linkedin", href: "https://www.linkedin.com/in/leonamsantana/" },
+              { icon: "instagram", href: "https://www.instagram.com/leonam.santtana/" },
+              { icon: "cv", href: cvLink, download: true },
             ].map((social) => (
               <Button
                 key={social.icon}
@@ -40,7 +44,17 @@ export function CTASection() {
                 asChild
                 className="flex-1 lg:flex-none"
               >
-                <a href={social.href}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download={social.download ? `CV_Leonam_Santana_${locale.toUpperCase()}.pdf` : undefined}
+                >
+                  {social.icon === 'whatsapp' && (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  )}
                   {social.icon === 'linkedin' && (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" />

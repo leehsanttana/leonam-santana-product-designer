@@ -36,7 +36,7 @@ export function ColorPaletteCard() {
   ];
 
   return (
-    <div className="bg-bg-elevated border border-border rounded-2xl p-8 mb-12">
+    <div className="bg-bg-elevated border border-border rounded-2xl p-4 md:p-8 mb-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
         {primaryColors.map((color, idx) => (
           <ColorSwatch key={idx} {...color} />
