@@ -17,25 +17,25 @@ export function CaseTitleHeader({
   heroImage,
 }: CaseTitleHeaderProps) {
   return (
-    <section className="mb-8">
-      <div className="flex flex-wrap gap-3 mb-6">
+    <section className="mb-ds-lg">
+      <div className="flex flex-wrap gap-ds-xs mb-ds-md">
         {skills.map((skill) => (
           <SkillTag key={skill} variant="default">{skill}</SkillTag>
         ))}
       </div>
 
-      <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text-primary mb-4 leading-[1.1]">
+      <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-text-primary mb-ds-sm leading-[1.1]">
         {title}
       </h1>
 
-      <p className="text-xl text-text-secondary max-w-[750px] mb-6 leading-relaxed font-light">
+      <p className="text-xl text-text-secondary max-w-[750px] mb-ds-md leading-relaxed font-light">
         {description}
       </p>
 
       {metrics && metrics.length > 0 && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-ds-sm mb-ds-md">
           {metrics.map((metric, i) => (
-            <div key={i} className="flex flex-col gap-2 p-5 rounded-2xl bg-bg-elevated border border-border shadow-sm">
+            <div key={i} className="flex flex-col gap-ds-xs p-ds-sm rounded-2xl bg-bg-elevated border border-border shadow-sm">
               <span className="text-[14px] font-medium tracking-[2px] uppercase text-text-muted">
                 {metric.label}
               </span>

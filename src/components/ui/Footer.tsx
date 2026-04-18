@@ -6,8 +6,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-border bg-background mt-20">
-      <div className="container mx-auto flex h-20 items-center justify-center px-4 sm:px-8 max-w-[1440px]">
+    <footer className="w-full border-t border-border bg-background mt-ds-2xl">
+      <div className="container mx-auto flex h-ds-2xl items-center justify-center px-ds-sm sm:px-ds-lg max-w-[1440px]">
         <p className="text-sm text-text-muted">
           © {currentYear} Leonam Santana. {t('rights')}
         </p>

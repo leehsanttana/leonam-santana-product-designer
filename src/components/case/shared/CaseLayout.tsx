@@ -69,13 +69,13 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
         onNavClick={handleNavClick}
       />
 
-      <div className="container mx-auto px-4 sm:px-8 max-w-[1440px] pt-40 lg:pt-32 pb-24">
-        <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
+      <div className="container mx-auto px-ds-sm sm:px-ds-lg max-w-[1440px] pt-ds-3xl lg:pt-ds-3xl pb-ds-3xl">
+        <div className="flex flex-col lg:flex-row gap-ds-2xl xl:gap-ds-3xl">
           {/* Sidebar Navigation (Desktop Only) */}
           <aside className="hidden lg:block w-full lg:w-[260px] shrink-0">
-            <div className="sticky top-32">
+            <div className="sticky top-ds-lg">
               {/* Desktop Back Button - Now in Sidebar */}
-              <Button variant="ghost" size="default" asChild className="mb-8 gap-2 text-text-secondary hover:text-text-primary h-auto p-0 hover:bg-transparent -ml-1">
+              <Button variant="ghost" size="default" asChild className="mb-ds-lg gap-ds-xs text-text-secondary hover:text-text-primary h-auto p-0 hover:bg-transparent -ml-6">
                 <Link href="/">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="m15 18-6-6 6-6" />
@@ -84,15 +84,15 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
                 </Link>
               </Button>
 
-              <div className="mb-6">
+              <div className="mb-ds-md">
                 <span className="text-sm font-light text-accent-pink mb-1 block">{projectType}</span>
                 <h2 className="text-3xl font-heading font-bold text-text-primary tracking-tight">{projectName}</h2>
               </div>
 
-              <div className="h-px w-full bg-border mb-8" />
+              <div className="h-px w-full bg-border mb-ds-lg" />
 
-              <h3 className="font-medium tracking-[2px] uppercase mb-6 text-text-muted">{t('sections')}</h3>
-              <nav className="flex flex-col space-y-2">
+              <h3 className="font-medium tracking-[2px] uppercase mb-ds-md text-text-muted">{t('sections')}</h3>
+              <nav className="flex flex-col space-y-ds-xs">
                 {sections.map((section) => {
                   const isActive = activeSection === section.id;
                   const activeColor = section.color || "#e040fb";
@@ -102,7 +102,7 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
                       key={section.id}
                       onClick={() => handleNavClick(section.id)}
                       className={cn(
-                        "group flex items-center gap-4 px-3 py-3 rounded-2xl transition-all duration-300 text-left",
+                        "group flex items-center gap-ds-sm px-ds-sm py-ds-sm rounded-2xl transition-all duration-300 text-left",
                         isActive ? "bg-bg-elevated" : "hover:bg-white/5"
                       )}
                       style={isActive ? { backgroundColor: `color-mix(in srgb, ${activeColor} 8%, transparent)` } : {}}
@@ -118,7 +118,7 @@ export function CaseLayout({ sections, children, projectType, projectName }: Cas
                         />
                       </div>
 
-                      <div className="flex flex-col gap-0.5 min-w-0">
+                      <div className="flex flex-col gap-ds-xs min-w-0">
                         <span
                           className={cn(
                             "text-[10px] font-medium tracking-[2px] uppercase",

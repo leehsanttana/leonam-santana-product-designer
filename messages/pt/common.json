@@ -1,4 +1,10 @@
 {
+  "metadata": {
+    "title": "Leonam Santana | Product Designer",
+    "description": "Transformo complexidade em interfaces simples, combinando UI, prototipação e design systems.",
+    "ogTitle": "Leonam Santana | Portfolio",
+    "ogDescription": "Product Designer especializado em produtos digitais e sistemas de design."
+  },
   "nav": {
     "projects": "Trabalhos",
     "about": "Sobre",
@@ -7,7 +13,7 @@
     "available": "Disponível"
   },
   "cta": {
-    "title": "Vamos para o próximo nível juntos?"
+    "title": "Vamos para o próximo nível"
   },
   "footer": {
     "rights": "Todos os direitos reservados."
@@ -16,6 +22,15 @@
     "backHome": "Voltar para a Home",
     "sections": "Seções",
     "nextProject": "PRÓXIMO PROJETO",
-    "viewCase": "Ver case"
+    "viewCase": "Ver case",
+    "backToProjects": "Voltar para Projetos",
+    "steps": {
+      "discover": "DESCOBRIR",
+      "define": "DEFINIR",
+      "ideas": "IDEALIZAR",
+      "solution": "SOLUÇÃO",
+      "results": "RESULTADOS",
+      "nextSteps": "PRÓXIMOS PASSOS"
+    }
   }
 }

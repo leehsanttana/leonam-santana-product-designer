@@ -66,11 +66,11 @@ export default function CoreSystemCase() {
   const tp = useTranslations("projects");
 
   const sections = [
-    { id: "discover", label: t("sections.discover"), step: "DESCOBRIR", color: PHASE_COLORS.discover },
-    { id: "define", label: t("sections.define"), step: "DEFINIR", color: PHASE_COLORS.define },
-    { id: "solution", label: t("sections.solution"), step: "SOLUÇÃO", color: PHASE_COLORS.solution },
-    { id: "results", label: t("sections.results"), step: "RESULTADOS", color: PHASE_COLORS.results },
-    { id: "next-steps", label: t("sections.nextSteps"), step: "PRÓXIMOS PASSOS", color: PHASE_COLORS.neutral },
+    { id: "discover", label: t("sections.discover"), step: tc("steps.discover"), color: PHASE_COLORS.discover },
+    { id: "define", label: t("sections.define"), step: tc("steps.define"), color: PHASE_COLORS.define },
+    { id: "solution", label: t("sections.solution"), step: tc("steps.solution"), color: PHASE_COLORS.solution },
+    { id: "results", label: t("sections.results"), step: tc("steps.results"), color: PHASE_COLORS.results },
+    { id: "next-steps", label: t("sections.nextSteps"), step: tc("steps.nextSteps"), color: PHASE_COLORS.neutral },
   ];
 
   const metadata = [
@@ -98,14 +98,14 @@ export default function CoreSystemCase() {
         heroImage={heroImage}
       />
 
-      <div className="mb-12 rounded-2xl border border-border bg-bg-elevated p-4">
+      <div className="rounded-2xl border border-border bg-bg-elevated p-4">
         <p className="text-text-primary font-light leading-[28px]">
           {t("confidentiality")}
         </p>
       </div>
 
       {/* VISÃO GERAL */}
-      <section className="mb-12 py-8 border-b border-border">
+      <section className="py-8 border-b border-border">
         <h2 className="text-heading-02 text-text-primary mb-4">{t("overview.title")}</h2>
         <div className="text-body-01 text-text-secondary mb-12 max-w-[750px] space-y-6">
           <p>{t("overview.p1")}</p>
@@ -317,17 +317,17 @@ export default function CoreSystemCase() {
       >
         <div className="space-y-8">
           <div>
-            <h3 className="text-base md:text-body-01 text-text-primary font-bold mb-8">{t("results.dashboardInbox.title")}</h3>
+            <h3 className="text-base md:text-body-01 text-text-primary font-bold mb-4">{t("results.dashboardInbox.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
               <div>
-                <p className="text-body-02 text-text-primary mb-4">{t("results.labels.improvements")}</p>
+                <p className="text-body-02 text-text-primary mb-2">{t("results.labels.improvements")}</p>
                 <ul className="space-y-3">
                   <ResultListItem type="improvement" text={t("results.improvements.0")} />
                   <ResultListItem type="improvement" text={t("results.improvements.1")} />
                 </ul>
               </div>
               <div>
-                <p className="text-body-02 text-text-primary mb-4">{t("results.labels.attention")}</p>
+                <p className="text-body-02 text-text-primary mb-2">{t("results.labels.attention")}</p>
                 <ul className="space-y-3">
                   <ResultListItem type="attention" text={t("results.attentions.0")} />
                   <ResultListItem type="attention" text={t("results.attentions.1")} />
@@ -337,10 +337,10 @@ export default function CoreSystemCase() {
           </div>
 
           <div>
-            <h3 className="text-base md:text-body-01 text-text-primary font-bold mb-8">{t("results.caseManager.title")}</h3>
+            <h3 className="text-base md:text-body-01 text-text-primary font-bold mb-4">{t("results.caseManager.title")}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
               <div>
-                <p className="text-body-02 text-text-primary mb-4">{t("results.labels.improvements")}</p>
+                <p className="text-body-02 text-text-primary mb-2">{t("results.labels.improvements")}</p>
                 <ul className="space-y-3">
                   <ResultListItem type="improvement" text={t("results.improvements.2")} />
                   <ResultListItem type="improvement" text={t("results.improvements.3")} />
@@ -349,7 +349,7 @@ export default function CoreSystemCase() {
                 </ul>
               </div>
               <div>
-                <p className="text-body-02 text-text-primary mb-4">{t("results.labels.attention")}</p>
+                <p className="text-body-02 text-text-primary mb-2">{t("results.labels.attention")}</p>
                 <ul className="space-y-3">
                   <ResultListItem type="attention" text={t("results.attentions.2")} />
                   <ResultListItem type="attention" text={t("results.attentions.3")} />
@@ -359,12 +359,10 @@ export default function CoreSystemCase() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-border">
-            <p className="text-base md:text-body-01 text-text-primary mb-4">{t("results.overall.score")}</p>
-            <p className="text-base md:text-body-01 text-text-secondary max-w-[750px]">
-              {t("results.overall.desc")}
-            </p>
-          </div>
+          <p className="text-base md:text-body-01 text-text-primary mb-4">{t("results.overall.score")}</p>
+          <p className="text-base md:text-body-01 text-text-secondary max-w-[750px]">
+            {t("results.overall.desc")}
+          </p>
         </div>
       </ResultsRenderer>
 
@@ -391,7 +389,7 @@ export default function CoreSystemCase() {
         const nextProject = PROJECTS[(currentIndex + 1) % PROJECTS.length];
 
         return (
-          <div className="mt-20 border-t border-border pt-12">
+          <div className="pt-12">
             <span className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted mb-8 block">
               {tc("nextProject")}
             </span>

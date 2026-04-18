@@ -20,7 +20,7 @@ export function FaqCard({ question, answer, isOpen, onClick }: FaqCardProps) {
     >
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between p-6 md:p-8 text-left group"
+        className="w-full flex items-center justify-between p-ds-md md:p-ds-lg text-left group"
       >
         <span className={`text-base md:text-lg font-light transition-colors ${isOpen ? "text-text-primary" : "text-text-secondary group-hover:text-text-primary"
           }`}>
@@ -42,7 +42,7 @@ export function FaqCard({ question, answer, isOpen, onClick }: FaqCardProps) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-8 md:px-8 md:pb-10 text-text-secondary leading-relaxed font-light border-t border-border/50 pt-6">
+            <div className="px-ds-md pb-ds-lg md:px-ds-lg md:pb-ds-lg text-text-secondary leading-relaxed font-light border-t border-border/50 pt-ds-md">
               {answer}
             </div>
           </motion.div>

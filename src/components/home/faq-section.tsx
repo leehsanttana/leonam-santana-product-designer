@@ -15,9 +15,9 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="container mx-auto px-4 max-w-[920px] py-8 lg:py-32 border-b border-border">
-      <div className="flex flex-col gap-12">
-        <div className="flex flex-col gap-4 text-center md:text-left">
+    <section id="faq" className="container mx-auto px-ds-sm max-w-[920px] py-ds-lg lg:py-ds-3xl border-b border-border">
+      <div className="flex flex-col gap-ds-xl">
+        <div className="flex flex-col gap-ds-sm text-center md:text-left">
           <h2 className="text-[28px] font-heading font-bold text-text-primary leading-[1.2]">
             {t('sectionTitle')}
           </h2>
@@ -26,7 +26,7 @@ export function FAQSection() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-ds-sm w-full">
           {faqItems.map((item, index) => (
             <FaqCard
               key={index}

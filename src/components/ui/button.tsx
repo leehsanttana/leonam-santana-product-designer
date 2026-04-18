@@ -21,9 +21,9 @@ const buttonVariants = cva(
         cyan: "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20",
       },
       size: {
-        default: "h-[44px] px-6 py-3",
-        sm: "h-9 px-4 text-xs",
-        lg: "h-[54px] px-10 text-base",
+        default: "h-[44px] px-ds-md py-ds-xs",
+        sm: "h-9 px-ds-sm text-xs",
+        lg: "h-[54px] px-ds-xl text-base",
         icon: "h-[44px] w-[44px]",
         social: "h-[52px] w-[100px]",
       },

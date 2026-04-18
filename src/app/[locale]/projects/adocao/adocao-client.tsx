@@ -28,11 +28,11 @@ export default function AdocaoCase() {
   const tp = useTranslations("projects");
 
   const sections = [
-    { id: "discover", label: t("sections.discover"), step: "DESCOBRIR", color: PHASE_COLORS.discover },
-    { id: "define", label: t("sections.define"), step: "DEFINIR", color: PHASE_COLORS.define },
-    { id: "idealize", label: t("sections.idealize"), step: "IDEALIZAR", color: PHASE_COLORS.idealize },
-    { id: "solution", label: t("sections.solution"), step: "SOLUÇÃO", color: PHASE_COLORS.solution },
-    { id: "next-steps", label: t("sections.nextSteps"), step: "PRÓXIMOS PASSOS", color: PHASE_COLORS.neutral },
+    { id: "discover", label: t("sections.discover"), step: tc("steps.discover"), color: PHASE_COLORS.discover },
+    { id: "define", label: t("sections.define"), step: tc("steps.define"), color: PHASE_COLORS.define },
+    { id: "idealize", label: t("sections.idealize"), step: tc("steps.ideas"), color: PHASE_COLORS.idealize },
+    { id: "solution", label: t("sections.solution"), step: tc("steps.solution"), color: PHASE_COLORS.solution },
+    { id: "next-steps", label: t("sections.nextSteps"), step: tc("steps.nextSteps"), color: PHASE_COLORS.neutral },
   ];
 
   const metadata = [
@@ -61,7 +61,7 @@ export default function AdocaoCase() {
       />
 
       {/* VISÃO GERAL */}
-      <section className="mb-8 py-8 border-b border-border">
+      <section className="py-8 border-b border-border">
         <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">{t("overview.title")}</h2>
         <div className="text-body-01 text-text-secondary max-w-[750px] space-y-6">
           <p>{t("overview.p1")}</p>
@@ -406,7 +406,7 @@ export default function AdocaoCase() {
         const nextProject = PROJECTS[(currentIndex + 1) % PROJECTS.length];
 
         return (
-          <div className="mt-20 border-t border-border pt-12">
+          <div className="pt-12">
             <span className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted mb-8 block">
               {tc("nextProject")}
             </span>

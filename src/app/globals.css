@@ -22,6 +22,14 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  
+  --spacing-ds-xs: 8px;
+  --spacing-ds-sm: 16px;
+  --spacing-ds-md: 24px;
+  --spacing-ds-lg: 32px;
+  --spacing-ds-xl: 48px;
+  --spacing-ds-2xl: 80px;
+  --spacing-ds-3xl: 128px;
 
   /* Custom Figma Colors */
   --color-bg-elevated: #221e30;

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, ArrowLeft } from "lucide-react";
 
@@ -21,6 +22,7 @@ export function CaseSubNavbar({
   projectType,
   onNavClick,
 }: CaseSubNavbarProps) {
+  const t = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
   const [headerHidden, setHeaderHidden] = useState(false);
   const { scrollY } = useScroll();
@@ -43,39 +45,39 @@ export function CaseSubNavbar({
       {/* 1. Persistent Project Bar (Mobile Only) */}
       <motion.div
         initial={false}
-        animate={{ 
-          top: headerHidden ? 0 : 64, // 64px is the height of the global mobile header
+        animate={{
+          top: headerHidden ? 0 : 73,
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="lg:hidden fixed left-0 w-full z-[100] bg-bg-elevated border-b border-border shadow-xl h-16 flex items-center"
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="container px-ds-md flex items-center justify-between">
           {/* Left: Back Arrow */}
-          <Link 
-            href="/" 
-            className="w-10 h-10 flex items-center justify-center -ml-2 rounded-full hover:bg-white/5 text-text-secondary transition-colors"
+          <Link
+            href="/"
+            className="hover:bg-white/5 text-text-secondary transition-colors"
           >
             <ArrowLeft size={24} />
           </Link>
 
           {/* Center: Active Session Name */}
-          <div className="flex items-center gap-3 overflow-hidden px-4">
-             <div 
-               className="w-2 h-2 rounded-full shrink-0"
-               style={{ 
-                 backgroundColor: activeColor, 
-                 boxShadow: `0px 0px 8px color-mix(in srgb, ${activeColor} 60%, transparent)` 
-               }}
-             />
-             <span className="text-[11px] font-bold tracking-[2px] uppercase text-text-primary truncate">
-               {currentSection?.step}
-             </span>
+          <div className="flex items-center gap-ds-md overflow-hidden px-ds-sm">
+            <div
+              className="w-2 h-2 rounded-full shrink-0"
+              style={{
+                backgroundColor: activeColor,
+                boxShadow: `0px 0px 8px color-mix(in srgb, ${activeColor} 60%, transparent)`
+              }}
+            />
+            <span className="text-[11px] font-bold tracking-[2px] uppercase text-text-primary truncate">
+              {currentSection?.step}
+            </span>
           </div>
 
           {/* Right: Hamburger */}
           <button
             onClick={() => setIsOpen(true)}
-            className="w-10 h-10 flex items-center justify-center -mr-2 rounded-full hover:bg-white/5 text-text-secondary transition-colors"
+            className="hover:bg-white/5 text-text-secondary transition-colors"
           >
             <Menu size={24} />
           </button>
@@ -92,7 +94,7 @@ export function CaseSubNavbar({
             className="fixed inset-0 z-[130] bg-background/95 backdrop-blur-xl lg:hidden flex flex-col"
           >
             {/* Drawer Header */}
-            <div className="flex items-center justify-between px-8 py-6 border-b border-border bg-bg-elevated">
+            <div className="flex items-center justify-between px-ds-lg py-ds-md border-b border-border bg-bg-elevated">
               <div className="flex flex-col">
                 <span className="text-[10px] font-medium tracking-[2.5px] uppercase text-accent-pink leading-none mb-1">
                   {projectType}
@@ -110,10 +112,10 @@ export function CaseSubNavbar({
             </div>
 
             {/* Sections List (Desktop Style Sync) */}
-            <div className="flex-1 overflow-y-auto px-6 py-10 space-y-8">
+            <div className="flex-1 overflow-y-auto px-ds-md py-ds-xl space-y-ds-lg">
               <div>
-                <h3 className="font-medium tracking-[2px] uppercase mb-6 text-text-muted px-2">SEÇÕES</h3>
-                <nav className="flex flex-col space-y-3">
+                <h3 className="font-medium tracking-[2px] uppercase mb-ds-md text-text-muted px-ds-xs">{t("sections")}</h3>
+                <nav className="flex flex-col space-y-ds-md">
                   {sections.map((section) => {
                     const isActive = activeSection === section.id;
                     const sectionColor = section.color || "#e040fb";
@@ -126,7 +128,7 @@ export function CaseSubNavbar({
                           setIsOpen(false);
                         }}
                         className={cn(
-                          "group flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-300 text-left",
+                          "group flex items-center gap-ds-sm px-ds-sm py-ds-sm rounded-2xl transition-all duration-300 text-left",
                           isActive ? "bg-bg-elevated shadow-lg" : "hover:bg-white/5"
                         )}
                         style={isActive ? { backgroundColor: `color-mix(in srgb, ${sectionColor} 12%, #1a1a1a)` } : {}}
@@ -142,7 +144,7 @@ export function CaseSubNavbar({
                           />
                         </div>
 
-                        <div className="flex flex-col gap-0.5 min-w-0">
+                        <div className="flex flex-col gap-ds-xs min-w-0">
                           <span
                             className={cn(
                               "text-[10px] font-medium tracking-[2px] uppercase",
@@ -167,15 +169,15 @@ export function CaseSubNavbar({
             </div>
 
             {/* Footer / Back link */}
-            <div className="p-8 border-t border-border bg-bg-elevated/50">
-               <Link 
-                href="/" 
+            <div className="p-ds-lg border-t border-border bg-bg-elevated/50">
+              <Link
+                href="/"
                 className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
-               >
-                 <ArrowLeft size={18} />
-                 Voltar para Projetos
-               </Link>
+              >
+                <ArrowLeft size={18} />
+                {t("backToProjects")}
+              </Link>
             </div>
           </motion.div>
         )}

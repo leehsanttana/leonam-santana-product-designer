@@ -28,9 +28,9 @@
   },
   "about": {
     "sectionTitle": "About Me",
-    "p1": "I'm Leonam, a Product Designer who unites the strategic vision of design with the pragmatics of front-end development.",
-    "p2": "I focus on agile and assertive processes, ensuring that every pixel has a functional purpose and that the transition from design to engineering is flawless.",
-    "p3": "I am passionate about technology and enjoy understanding a bit of everything, from design to development. I love games, sports, and everything involving creativity and innovation.",
+    "p1": "I'm Leonam, a Product Designer who connects design decisions with real implementation. I focus on bridging the gap between design and development, transforming complex requirements into scalable and intuitive interfaces ready to be built.",
+    "p2": "I have experience designing B2B products from discovery to delivery, with a strong focus on Design Systems, prototyping, and collaboration with engineering teams. With a background in front-end development, I bring a technical mindset to design, ensuring solutions are not only usable but also feasible and efficient to implement.",
+    "p3": "I'm particularly interested in using AI and design-to-code workflows to accelerate how ideas become real products. Outside of work, I'm passionate about technology, games, and sports, always exploring new ways to create and innovate.",
     "skills": [
       "UI Design",
       "Figma",

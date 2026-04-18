@@ -24,15 +24,15 @@ export function CaseSection({
   className,
 }: CaseSectionProps) {
   return (
-    <section id={id} className={cn("py-8 border-b border-border last:border-b-0", className)}>
-      <div className="mb-6">
+    <section id={id} className={cn("py-ds-lg border-b border-border last:border-b-0", className)}>
+      <div className="mb-ds-md">
         {number && label && (
-          <div className="mb-4">
+          <div className="mb-ds-sm">
             <PhaseLabel number={number} label={label} color={color} />
           </div>
         )}
 
-        <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">{title}</h2>
+        <h2 className="text-3xl font-heading font-bold text-text-primary mb-ds-sm">{title}</h2>
         <div className="text-[18px] text-text-secondary max-w-[750px] leading-[1.6] font-light">
           {typeof description === "string" ? <p>{description}</p> : description}
         </div>

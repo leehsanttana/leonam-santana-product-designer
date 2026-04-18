@@ -22,7 +22,7 @@ export function ImageCard({
       className
     )}>
       {/* Header - Image Description */}
-      <div className="px-4 py-[10px] border-b border-border">
+      <div className="px-ds-sm py-ds-xs border-b border-border">
         <p className="text-body-04 text-text-secondary">
           {imageDescription}
         </p>
@@ -39,7 +39,7 @@ export function ImageCard({
 
       {/* Footer - Text Details (Optional) */}
       {textDetails && (
-        <div className="px-4 py-[10px] border-t border-border">
+        <div className="px-ds-sm py-ds-xs border-t border-border">
           <p className="text-body-02 text-text-primary">
             {textDetails}
           </p>

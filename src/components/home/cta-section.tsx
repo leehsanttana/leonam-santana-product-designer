@@ -7,17 +7,17 @@ import { useTranslations, useLocale } from "next-intl";
 export function CTASection() {
   const t = useTranslations('cta');
   const locale = useLocale();
-  const cvLink = locale === 'en' ? '/CV-Leonam-Santana-EN.pdf' : '/CV-Leonam-Santana-PT.pdf';
+  const cvLink = locale === 'en' ? '/leonam_santana_resume.pdf' : '/leonam_santana_curriculo.pdf';
 
   return (
-    <section id="contact" className="container mx-auto px-4 max-w-[1440px] py-8 lg:py-32">
-      <div className="bg-bg-elevated border border-border p-6 md:p-12 lg:p-16 rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl group">
+    <section id="contact" className="container mx-auto px-ds-sm max-w-[1440px] py-ds-lg lg:py-ds-3xl">
+      <div className="bg-bg-elevated border border-border p-ds-md md:p-ds-xl lg:p-ds-2xl rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-ds-xl relative overflow-hidden shadow-2xl group">
 
         <h2 className="text-[32px] md:text-[56px] font-heading font-bold tracking-[-3px] text-text-primary leading-[1.1] max-w-md">
           {t('title')}
         </h2>
 
-        <div className="flex flex-col gap-4 w-full lg:w-auto">
+        <div className="flex flex-col gap-ds-sm w-full lg:w-auto">
           {/* Email Pill */}
           <Button asChild className="w-full lg:w-auto h-[48px] px-8">
             <a href="mailto:leonamsanttana@gmail.com">
@@ -30,7 +30,7 @@ export function CTASection() {
           </Button>
 
           {/* Social Links Row */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-ds-xs">
             {[
               { icon: "whatsapp", href: "https://wa.me/5521976370007" },
               { icon: "linkedin", href: "https://www.linkedin.com/in/leonamsantana/" },

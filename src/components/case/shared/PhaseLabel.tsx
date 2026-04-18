@@ -12,22 +12,22 @@ export function PhaseLabel({ number, label, color, className }: PhaseLabelProps)
   // When a color is passed, use it as inline style (dynamic theming).
   // When no color is passed, fall back to the design token: --color-accent-cyan.
   const textStyle = color ? { color } : undefined;
-  const bgStyle = color ? { backgroundColor: `${color}14` } : undefined;
+  const bgStyle = color ? { backgroundColor: `color-mix(in srgb, ${color} 10%, transparent)` } : undefined;
 
   return (
-    <div className={cn("inline-flex gap-[8px] items-center", className)}>
+    <div className={cn("inline-flex gap-ds-xs items-center", className)}>
       <p
-        className={cn("text-body-03", !color && "text-accent-cyan")}
+        className={cn("text-[12px] font-medium tracking-[2px] uppercase", !color && "text-accent-cyan")}
         style={textStyle}
       >
-        {number}
+        {number?.padStart(2, '0')}
       </p>
       <div
-        className={cn("px-[10px] py-[2px] rounded-[999px] flex items-center justify-center", !color && "bg-accent-cyan/[0.08]")}
+        className={cn("px-ds-sm py-ds-xs rounded-full flex items-center justify-center", !color && "bg-accent-cyan/10")}
         style={bgStyle}
       >
         <p
-          className={cn("text-body-04", !color && "text-accent-cyan")}
+          className={cn("text-[11px] font-bold tracking-[2.5px] uppercase", !color && "text-accent-cyan")}
           style={textStyle}
         >
           {label}

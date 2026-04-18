@@ -12,10 +12,10 @@ export function DataCard({ title, value, content, color }: DataCardProps) {
   const textStyle = color ? { color } : undefined;
 
   return (
-    <div className="p-4 md:p-6 rounded-2xl bg-bg-elevated border border-border group hover:border-border/60 transition-all">
+    <div className="p-ds-sm md:p-ds-md rounded-2xl bg-bg-elevated border border-border group hover:border-border/60 transition-all">
       {value && (
         <span
-          className={cn("text-2xl font-normal block mb-2", !color && "text-accent-cyan")}
+          className={cn("text-2xl font-normal block mb-ds-xs", !color && "text-accent-cyan")}
           style={textStyle}
         >
           {value}
@@ -23,7 +23,7 @@ export function DataCard({ title, value, content, color }: DataCardProps) {
       )}
       {title && (
         <h3
-          className={cn("text-base font-light mb-3", !color && "text-accent-cyan")}
+          className={cn("text-base font-light mb-ds-xs", !color && "text-accent-cyan")}
           style={textStyle}
         >
           {title}
@@ -44,7 +44,7 @@ export function DataGrid({ children, columns = 3 }: { children: React.ReactNode;
   };
 
   return (
-    <div className={cn("grid gap-6 mb-12", gridCols[columns as keyof typeof gridCols])}>
+    <div className={cn("grid gap-ds-md mb-ds-xl", gridCols[columns as keyof typeof gridCols])}>
       {children}
     </div>
   );

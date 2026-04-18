@@ -5,7 +5,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 
 const lexend = Lexend({
@@ -18,13 +18,45 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Leonam Santana | Product Designer",
-  description: "Transformo complexidade em interfaces simples, combinando UI, prototipação e design systems.",
-  icons: {
-    icon: "/Favicon.svg",
-  },
-};
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ locale: string }> 
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    metadataBase: new URL('https://leonamsantana.com.br'),
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://leonamsantana.com.br/${locale}`,
+      siteName: t('title'),
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+      locale: locale === 'pt' ? 'pt_BR' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/og-image.png'],
+    },
+    icons: {
+      icon: "/Favicon.svg",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
