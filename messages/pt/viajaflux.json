@@ -1,0 +1,71 @@
+{
+  "projectType": "Web App",
+  "projectName": "Viajaflux",
+  "title": "Viajaflux",
+  "subtitle": "Redesenho da interface de uma plataforma B2B de gestão de viagens corporativas, com foco em usabilidade e clareza na tomada de decisões.",
+  "confidentiality": "\"Alguns detalhes foram adaptados ou omitidos por questões de confidencialidade, mantendo o foco nos desafios de design e nas soluções propostas.\"",
+  "metadata": {
+    "role": {
+      "label": "PAPEL",
+      "value": "UX/UI Designer"
+    },
+    "duration": {
+      "label": "DURAÇÃO",
+      "value": "1 mês"
+    },
+    "platform": {
+      "label": "PLATAFORMA",
+      "value": "Web / Desktop"
+    },
+    "tools": {
+      "label": "FERRAMENTAS",
+      "value": "Figma, FigJam"
+    }
+  },
+  "sections": {
+    "discover": "Entendendo o problema",
+    "define": "Definindo a direção",
+    "solution": "Design da solução"
+  },
+  "overview": {
+    "title": "Visão geral",
+    "p1": "O Viajaflux é uma plataforma B2B voltada para a gestão de viagens corporativas. O projeto surgiu da necessidade de redesenhar sua interface, que apresentava sérios problemas de usabilidade que comprometiam o fluxo principal dos usuários: comparar valores de passagens e tomar decisões com segurança e eficiência."
+  },
+  "discover": {
+    "title": "Entendendo o problema",
+    "description": "A plataforma apresentava problemas críticos de usabilidade que dificultavam a principal tarefa do usuário: comparar valores de viagens e tomar decisões com segurança.",
+    "p2": "Apesar de seguir parcialmente heurísticas de usabilidade, o sistema não aplicava princípios fundamentais de design, resultando em baixa hierarquia visual, uso inadequado de espaços em branco e pouco contraste entre ações. Isso gerava fricção na navegação e dificultava a identificação de elementos interativos.",
+    "p3": "Além disso, a interface não estava alinhada ao Design System da empresa, comprometendo a consistência visual e a escalabilidade do produto.",
+    "images": {
+      "homeBefore": "PÁGINA INICIAL | ANTES",
+      "resultsBefore": "RESULTADO DE PESQUISA | ANTES"
+    }
+  },
+  "define": {
+    "title": "Definindo a direção",
+    "description": "Para entender melhor o contexto e as expectativas dos usuários, analisei plataformas concorrentes e identifiquei padrões comuns na organização de informações e fluxos de busca.",
+    "p2": "A partir disso, redesenhei a interface com foco em:",
+    "goals": {
+      "colors": "Aplicação consistente da paleta de cores da empresa",
+      "hierarchy": "Reestruturação da hierarquia visual",
+      "spacing": "Melhor uso de espaçamento para organizar conteúdos",
+      "contrast": "Aumento de contraste para destacar ações e estados interativos"
+    },
+    "p3": "Também otimizei o fluxo de busca e comparação, tornando as decisões mais rápidas e claras para o usuário."
+  },
+  "solution": {
+    "title": "Design da solução",
+    "description": "Com a direção clara, redesenhei as telas principais do produto — homepage e página de resultados — priorizando a hierarquia visual, clareza de ações e aderência ao Design System da empresa.",
+    "homeAfter": {
+      "caption": "PÁGINA INICIAL | DEPOIS",
+      "card1": "A área de busca foi centralizada, destacando a principal ação do sistema",
+      "card2": "Usuários podem selecionar previamente companhias aéreas, aumentando o controle sobre os resultados"
+    },
+    "resultsAfter": {
+      "caption": "PÁGINA DE RESULTADOS | DEPOIS",
+      "card1": "Informações da busca permanecem visíveis durante a navegação, permitindo ajustes sem reiniciar o fluxo",
+      "card2": "Filtros foram modernizados com interações mais dinâmicas (como range inputs)",
+      "card3": "A listagem de resultados foi reorganizada com melhor contraste e hierarquia, facilitando a leitura"
+    }
+  }
+}

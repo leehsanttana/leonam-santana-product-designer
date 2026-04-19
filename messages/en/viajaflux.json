@@ -1,0 +1,71 @@
+{
+  "projectType": "Web App",
+  "projectName": "Viajaflux",
+  "title": "Viajaflux",
+  "subtitle": "Redesign of a B2B corporate travel management platform's interface, focused on usability and clarity in decision-making.",
+  "confidentiality": "\"Some details have been adapted or omitted for confidentiality reasons, keeping the focus on the design challenges and solutions proposed.\"",
+  "metadata": {
+    "role": {
+      "label": "ROLE",
+      "value": "UX/UI Designer"
+    },
+    "duration": {
+      "label": "DURATION",
+      "value": "1 month"
+    },
+    "platform": {
+      "label": "PLATFORM",
+      "value": "Web / Desktop"
+    },
+    "tools": {
+      "label": "TOOLS",
+      "value": "Figma, FigJam"
+    }
+  },
+  "sections": {
+    "discover": "Understanding the problem",
+    "define": "Defining the direction",
+    "solution": "Solution design"
+  },
+  "overview": {
+    "title": "Overview",
+    "p1": "Viajaflux is a B2B platform focused on corporate travel management. The project arose from the need to redesign its interface, which had serious usability issues that compromised the main user flow: comparing travel prices and making decisions safely and efficiently."
+  },
+  "discover": {
+    "title": "Understanding the problem",
+    "description": "The platform had critical usability issues that hindered the main user task: comparing travel costs and making decisions with confidence.",
+    "p2": "Although the system partially followed usability heuristics, it did not apply fundamental design principles, resulting in poor visual hierarchy, inadequate use of white space, and low contrast between actions. This created friction in navigation and made it difficult to identify interactive elements.",
+    "p3": "Furthermore, the interface was not aligned with the company's Design System, compromising visual consistency and product scalability.",
+    "images": {
+      "homeBefore": "HOMEPAGE | BEFORE",
+      "resultsBefore": "SEARCH RESULTS | BEFORE"
+    }
+  },
+  "define": {
+    "title": "Defining the direction",
+    "description": "To better understand the context and user expectations, I analyzed competitor platforms and identified common patterns in information organization and search flows.",
+    "p2": "From this, I redesigned the interface focusing on:",
+    "goals": {
+      "colors": "Consistent application of the company's color palette",
+      "hierarchy": "Restructuring of the visual hierarchy",
+      "spacing": "Better use of spacing to organize content",
+      "contrast": "Increased contrast to highlight actions and interactive states"
+    },
+    "p3": "I also optimized the search and comparison flow, making decisions faster and clearer for the user."
+  },
+  "solution": {
+    "title": "Solution design",
+    "description": "With a clear direction, I redesigned the main product screens — homepage and results page — prioritizing visual hierarchy, action clarity, and adherence to the company's Design System.",
+    "homeAfter": {
+      "caption": "HOMEPAGE | AFTER",
+      "card1": "The search area was centralized, highlighting the system's main action",
+      "card2": "Users can pre-select airlines, increasing control over results"
+    },
+    "resultsAfter": {
+      "caption": "SEARCH RESULTS | AFTER",
+      "card1": "Search information remains visible during navigation, allowing adjustments without restarting the flow",
+      "card2": "Filters were modernized with more dynamic interactions (such as range inputs)",
+      "card3": "The results listing was reorganized with better contrast and hierarchy, making it easier to read"
+    }
+  }
+}

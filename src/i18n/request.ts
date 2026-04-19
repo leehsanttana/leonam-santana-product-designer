@@ -14,6 +14,7 @@ export default getRequestConfig(async ({requestLocale}) => {
   const home = (await import(`../../messages/${locale}/home.json`)).default;
   const adocao = (await import(`../../messages/${locale}/adocao.json`)).default;
   const coreSystem = (await import(`../../messages/${locale}/core-system.json`)).default;
+  const viajaflux = (await import(`../../messages/${locale}/viajaflux.json`)).default;
 
   return {
     locale,
@@ -23,7 +24,8 @@ export default getRequestConfig(async ({requestLocale}) => {
       adocao: adocao,
       "core-system": coreSystem,
       // Backward compatibility for old key coreSystem if needed, but I'll update the component
-      coreSystem: coreSystem 
+      coreSystem: coreSystem,
+      viajaflux: viajaflux,
     }
   };
 });

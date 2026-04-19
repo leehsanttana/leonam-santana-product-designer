@@ -33,11 +33,11 @@ export const PROJECTS: Project[] = [
     id: "03",
     slug: "viajaflux",
     title: "Viajaflux",
-    type: "Mobile App • Viagens • 2023",
-    href: "#",
-    disabled: true,
-    image: "/viajaflux-project-banner.jpg",
-    imageAlt: "/viajaflux-project-banner.jpg"
+    type: "Web App • Travel • 2024",
+    href: "/projects/viajaflux",
+    disabled: false,
+    image: "/viajaflux/viajaflux-project-banner.jpg",
+    imageAlt: "/viajaflux/viajaflux-project-banner.jpg"
   },
   {
     id: "04",
