@@ -9,7 +9,7 @@ import { Link } from "@/i18n/routing";
 export function HeroSection() {
   const t = useTranslations('hero');
   const locale = useLocale();
-  const cvLink = locale === 'en' ? '/leonam_santana_resume.pdf' : '/leonam_santana_curriculo.pdf';
+  const cvLink = locale === 'en' ? '/leonam_santana_resume.docx' : '/leonam_santana_curriculo.docx';
 
   return (
     <section id="hero" className="container mx-auto px-ds-sm max-w-[1440px] min-h-screen py-ds-2xl flex flex-col justify-center border-b border-border relative overflow-hidden">
@@ -42,7 +42,7 @@ export function HeroSection() {
                 href={cvLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                download={`CV_Leonam_Santana_${locale.toUpperCase()}.pdf`}
+                download={`CV_Leonam_Santana_${locale.toUpperCase()}.docx`}
                 className="w-full justify-center"
               >
                 {t('resume')}

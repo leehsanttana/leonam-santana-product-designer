@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 export function CTASection() {
   const t = useTranslations('cta');
   const locale = useLocale();
-  const cvLink = locale === 'en' ? '/leonam_santana_resume.pdf' : '/leonam_santana_curriculo.pdf';
+  const cvLink = locale === 'en' ? '/leonam_santana_resume.docx' : '/leonam_santana_curriculo.docx';
 
   return (
     <section id="contact" className="container mx-auto px-ds-sm max-w-[1440px] py-ds-lg lg:py-ds-3xl">
@@ -48,7 +48,7 @@ export function CTASection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download={social.download ? `CV_Leonam_Santana_${locale.toUpperCase()}.pdf` : undefined}
+                  download={social.download ? `CV_Leonam_Santana_${locale.toUpperCase()}.docx` : undefined}
                 >
                   {social.icon === 'whatsapp' && (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
