@@ -63,7 +63,7 @@ export default function AdocaoCase() {
       {/* VISÃO GERAL */}
       <section className="py-8 border-b border-border">
         <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">{t("overview.title")}</h2>
-        <div className="text-body-01 text-text-secondary max-w-[750px] space-y-6">
+        <div className="text-body-01 text-text-secondary max-w-187.5 space-y-6">
           <p>{t("overview.p1")}</p>
           <p>{t("overview.p2")}</p>
         </div>
@@ -72,6 +72,8 @@ export default function AdocaoCase() {
       {/* 01. DESCOBRIR */}
       <DiscoverRenderer
         id="discover"
+        number="01"
+        label={tc("steps.discover")}
         title={t("discover.title")}
         description={t("discover.description")}
       >
@@ -90,7 +92,7 @@ export default function AdocaoCase() {
           />
         </DataGrid>
 
-        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-187.5 mb-6">
           {t("discover.stats.behavior.content")}
         </p>
 
@@ -109,7 +111,7 @@ export default function AdocaoCase() {
           />
         </DataGrid>
 
-        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-187.5 mb-6">
           {t("discover.benchmarkingTitle")}
         </p>
 
@@ -207,6 +209,8 @@ export default function AdocaoCase() {
       {/* 02. DEFINIR */}
       <DefineRenderer
         id="define"
+        number="02"
+        label={tc("steps.define")}
         title={t("define.title")}
         description={t("define.description")}
       >
@@ -217,7 +221,7 @@ export default function AdocaoCase() {
         </div>
 
         <h3 className="text-xl font-heading font-bold text-text-primary mb-4">{t("define.povTitle")}</h3>
-        <p className="text-body-01 text-text-secondary max-w-[750px] mb-6">
+        <p className="text-body-01 text-text-secondary max-w-187.5 mb-6">
           {t("define.povDesc")}
         </p>
 
@@ -233,6 +237,8 @@ export default function AdocaoCase() {
       {/* 03. IDEALIZAR */}
       <IdeaRenderer
         id="idealize"
+        number="03"
+        label={tc("steps.ideas")}
         title={t("idealize.title")}
         description={t("idealize.description")}
       >
@@ -260,6 +266,8 @@ export default function AdocaoCase() {
       {/* 04. SOLUÇÃO */}
       <SolutionRenderer
         id="solution"
+        number="04"
+        label={tc("steps.solution")}
         title={t("solution.title")}
         description={t("solution.description")}
       >
@@ -323,7 +331,7 @@ export default function AdocaoCase() {
 
         <div className="mt-8 pt-8 border-t border-border/50">
           <h3 className="text-3xl font-heading font-bold text-text-primary mb-4">{t("solution.result.title")}</h3>
-          <div className="text-body-01 text-text-secondary max-w-[850px] space-y-6 mb-6">
+          <div className="text-body-01 text-text-secondary max-w-212.5 space-y-6 mb-6">
             <p>{t("solution.result.p1")}</p>
             <p>{t("solution.result.p2")}</p>
           </div>
@@ -384,6 +392,8 @@ export default function AdocaoCase() {
       {/* PRÓXIMOS PASSOS */}
       <NextStepsRenderer
         id="next-steps"
+        number="05"
+        label={tc("steps.nextSteps")}
         title={t("nextSteps.title")}
         description={t("nextSteps.description")}
       >
@@ -412,7 +422,7 @@ export default function AdocaoCase() {
             </span>
 
             <Link
-              href={nextProject.href as any}
+              href={nextProject.href as React.ComponentProps<typeof Link>["href"]}
               className={cn(
                 "group block w-full",
                 nextProject.disabled && "pointer-events-none opacity-40"
@@ -420,13 +430,13 @@ export default function AdocaoCase() {
             >
               <div className="flex flex-col gap-6">
                 {/* Image Container */}
-                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-bg-subtle rounded-[24px] overflow-hidden border border-border">
+                <div className="relative w-full aspect-video md:aspect-21/9 bg-bg-subtle rounded-3xl overflow-hidden border border-border">
                   <img
                     src={nextProject.imageAlt}
                     alt={nextProject.title}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-bg/20 to-transparent" />
                 </div>
 
                 {/* Content Below */}

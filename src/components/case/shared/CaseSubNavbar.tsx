@@ -49,7 +49,7 @@ export function CaseSubNavbar({
           top: headerHidden ? 0 : 73,
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="lg:hidden fixed left-0 w-full z-[100] bg-bg-elevated border-b border-border shadow-xl h-16 flex items-center"
+        className="lg:hidden fixed left-0 w-full z-100 bg-bg-elevated border-b border-border shadow-xl h-16 flex items-center"
       >
         <div className="container px-ds-md flex items-center justify-between">
           {/* Left: Back Arrow */}
@@ -91,7 +91,7 @@ export function CaseSubNavbar({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[130] bg-background/95 backdrop-blur-xl lg:hidden flex flex-col"
+            className="fixed inset-0 z-130 bg-background/95 backdrop-blur-xl lg:hidden flex flex-col"
           >
             {/* Drawer Header */}
             <div className="flex items-center justify-between px-ds-lg py-ds-md border-b border-border bg-bg-elevated">
@@ -99,7 +99,7 @@ export function CaseSubNavbar({
                 <span className="text-[10px] font-medium tracking-[2.5px] uppercase text-accent-pink leading-none mb-1">
                   {projectType}
                 </span>
-                <h2 className="text-xl font-heading font-bold text-text-primary truncate max-w-[200px]">
+                <h2 className="text-xl font-heading font-bold text-text-primary truncate max-w-50">
                   {projectName}
                 </h2>
               </div>

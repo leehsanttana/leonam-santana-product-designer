@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t border-border bg-background mt-ds-2xl">
-      <div className="container mx-auto flex h-ds-2xl items-center justify-center px-ds-sm sm:px-ds-lg max-w-[1440px]">
+      <div className="container mx-auto flex h-ds-2xl items-center justify-center px-ds-sm sm:px-ds-lg max-w-360">
         <p className="text-sm text-text-muted">
           © {currentYear} Leonam Santana. {t('rights')}
         </p>

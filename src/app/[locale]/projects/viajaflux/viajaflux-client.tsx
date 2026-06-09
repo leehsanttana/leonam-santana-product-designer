@@ -60,10 +60,12 @@ export default function ViajafluxCase() {
       {/* 01. DESCOBRIR */}
       <DiscoverRenderer
         id="discover"
+        number="01"
+        label={tc("steps.discover")}
         title={t("discover.title")}
         description={t("discover.description")}
       >
-        <div className="text-body-01 text-text-secondary max-w-[750px] space-y-6 mb-ds-xl leading-relaxed font-light">
+        <div className="text-body-01 text-text-secondary max-w-187.5 space-y-6 mb-ds-xl leading-relaxed font-light">
           <p>{t("discover.p2")}</p>
           <p>{t("discover.p3")}</p>
         </div>
@@ -85,10 +87,12 @@ export default function ViajafluxCase() {
       {/* 02. DEFINIR */}
       <DefineRenderer
         id="define"
+        number="02"
+        label={tc("steps.define")}
         title={t("define.title")}
         description={t("define.description")}
       >
-        <div className="text-body-01 text-text-secondary max-w-[750px] space-y-6 mb-ds-xl leading-relaxed font-light">
+        <div className="text-body-01 text-text-secondary max-w-187.5 space-y-6 mb-ds-xl leading-relaxed font-light">
           <p>{t("define.p2")}</p>
         </div>
 
@@ -111,7 +115,7 @@ export default function ViajafluxCase() {
           />
         </DataGrid>
 
-        <div className="text-body-01 text-text-secondary max-w-[750px] leading-relaxed font-light">
+        <div className="text-body-01 text-text-secondary max-w-187.5 leading-relaxed font-light">
           <p>{t("define.p3")}</p>
         </div>
       </DefineRenderer>
@@ -119,6 +123,8 @@ export default function ViajafluxCase() {
       {/* 03. SOLUÇÃO */}
       <SolutionRenderer
         id="solution"
+        number="03"
+        label={tc("steps.solution")}
         title={t("solution.title")}
         description={t("solution.description")}
       >
@@ -179,7 +185,7 @@ export default function ViajafluxCase() {
             </span>
 
             <Link
-              href={nextProject.href as any}
+              href={nextProject.href as React.ComponentProps<typeof Link>["href"]}
               className={cn(
                 "group block w-full",
                 nextProject.disabled && "pointer-events-none opacity-40"
@@ -187,13 +193,13 @@ export default function ViajafluxCase() {
             >
               <div className="flex flex-col gap-ds-md">
                 {/* Image Container */}
-                <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-bg-subtle rounded-[24px] overflow-hidden border border-border">
+                <div className="relative w-full aspect-video md:aspect-21/9 bg-bg-subtle rounded-3xl overflow-hidden border border-border">
                   <img
                     src={nextProject.imageAlt}
                     alt={nextProject.title}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bg/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-bg/20 to-transparent" />
                 </div>
 
                 {/* Content Below */}

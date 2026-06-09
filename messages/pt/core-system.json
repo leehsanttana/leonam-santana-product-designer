@@ -7,11 +7,11 @@
   "metadata": {
     "role": {
       "label": "PAPEL",
-      "value": "UX/UI Designer"
+      "value": "Product Designer (UX/UI)"
     },
     "duration": {
       "label": "DURA\u00c7\u00c3O",
-      "value": "3 meses"
+      "value": "Projeto: 18 meses / Meu envolvimento: 3 meses"
     },
     "platform": {
       "label": "PLATAFORMA",
@@ -36,13 +36,13 @@
   },
   "role": {
     "title": "Meu papel na equipe",
-    "p1": "Atuei como UX/UI Designer, sendo respons\u00e1vel por transformar a arquitetura existente em uma interface clara, consistente e utiliz\u00e1vel.",
-    "p2": "Trabalhei na constru\u00e7\u00e3o das telas finais e prot\u00f3tipos utilizados tanto para valida\u00e7\u00e3o com usu\u00e1rios quanto para comunica\u00e7\u00e3o do produto.",
-    "p3": "O projeto foi desenvolvido em colabora\u00e7\u00e3o com um time multidisciplinar, incluindo um per\u00edodo de trabalho presencial na Su\u00ed\u00e7a."
+    "p1": "Atuei como Product Designer, sendo respons\u00e1vel por transformar a arquitetura existente em uma interface clara, consistente e utiliz\u00e1vel.",
+    "p2": "Constru\u00ed as telas finais e prot\u00f3tipos que uma ag\u00eancia parceira utilizou para a valida\u00e7\u00e3o de usabilidade e que tamb\u00e9m apoiaram a comunica\u00e7\u00e3o do produto.",
+    "p3": "O projeto foi desenvolvido em colabora\u00e7\u00e3o com um time multidisciplinar, incluindo um per\u00edodo de trabalho presencial na Su\u00ed\u00e7a com especialistas do dom\u00ednio de tr\u00eas fundos de pens\u00e3o su\u00ed\u00e7os."
   },
   "discover": {
     "title": "Identificando os gaps",
-    "description": "O projeto \u00e9 constitu\u00eddo por algumas features como: Dashboard, Inbox (gerenciamento de documentos recebidos) e Processamento de casos. A partir da an\u00e1lise do sistema existente e dos resultados de testes de usabilidade, identifiquei pontos cr\u00edticos que impactavam a compreens\u00e3o e o fluxo de trabalho dos usu\u00e1rios.",
+    "description": "O projeto \u00e9 constitu\u00eddo por algumas features como: Dashboard, Inbox (gerenciamento de documentos recebidos) e Processamento de casos. Partindo dos achados de usabilidade do time de pesquisa, traduzi os resultados em prioridades de design e decis\u00f5es de interface, identificando pontos cr\u00edticos que impactavam a compreens\u00e3o e o fluxo de trabalho dos usu\u00e1rios.",
     "dashboard": {
       "title": "No Dashboard",
       "gaps": [
@@ -64,13 +64,12 @@
         "Falta a\u00e7\u00f5es para que o usu\u00e1rio confirme que os passos foram realizados"
       ]
     },
-    "automation": "Al\u00e9m disso, em rela\u00e7\u00e3o \u00e0 automa\u00e7\u00e3o foi observado que:",
+    "automation": "Al\u00e9m disso, em rela\u00e7\u00e3o \u00e0 automa\u00e7\u00e3o, o time de pesquisa tamb\u00e9m identificou que:",
     "cards": [
       "O modelo mental existe, mas n\u00e3o est\u00e1 sendo comunicado pelo UI",
-      "A automa\u00e7\u00e3o \u00e9 boa, mas n\u00e3o passa total confian\u00e7a",
-      "O produto \u00e9 funcionalmente bom, mas emocionalmente inseguro"
+      "A automa\u00e7\u00e3o \u00e9 boa, mas n\u00e3o passa total confian\u00e7a"
     ],
-    "evident": "Ap\u00f3s a an\u00e1lise dos resultados, ficou evidente que:",
+    "evident": "A partir dos achados do time de pesquisa, ficou claro que:",
     "findings": [
       "O sistema apresenta alta clareza visual e efici\u00eancia operacional, mas falha na orienta\u00e7\u00e3o inicial e na constru\u00e7\u00e3o de confian\u00e7a.",
       "Usu\u00e1rios entendem os fluxos ap\u00f3s explica\u00e7\u00e3o, indicando um desalinhamento entre o modelo mental e a interface.",
@@ -79,7 +78,7 @@
   },
   "define": {
     "title": "Definindo as lacunas dos problemas",
-    "description": "Ap\u00f3s a an\u00e1lise dos resultados, ficou evidente que:",
+    "description": "A partir dos achados da pesquisa, os principais problemas ficaram claros:",
     "dashboard": {
       "title": "Dashboard",
       "subtitle": "Problemas",
@@ -108,18 +107,30 @@
   },
   "solution": {
     "title": "Redefinindo a estrutura visual",
-    "cards": [
-      "Direcionei a aten\u00e7\u00e3o do usu\u00e1rio para as a\u00e7\u00f5es principais atrav\u00e9s de hierarquia visual e consist\u00eancia do design system",
-      "Estruturei o fluxo de forma clara e progressiva, guiando o usu\u00e1rio ao longo das etapas do processo",
-      "Tornei elementos interativos e estados mais evidentes, reduzindo ambiguidade e erros",
-      "Introduzi intera\u00e7\u00f5es diretas e contextuais, aumentando efici\u00eancia e reduzindo navega\u00e7\u00e3o desnecess\u00e1ria",
-      "Aumentei o foco na tarefa ativa com feedback visual e motion, reduzindo distra\u00e7\u00f5es",
-      "Reforcei transpar\u00eancia e controle com estados claros, valida\u00e7\u00f5es e feedbacks de a\u00e7\u00e3o"
-    ]
+    "transition": "O produto era funcionalmente bom, mas emocionalmente inseguro.",
+    "intro": "Partindo dos achados da pesquisa e de uma dire\u00e7\u00e3o de solu\u00e7\u00e3o definida, produzi o design em alta fidelidade e apliquei o design system do produto para garantir consist\u00eancia, acessibilidade e escalabilidade nas tr\u00eas \u00e1reas centrais.",
+    "videoCaption": "Solu\u00e7\u00e3o final \u2014 apresenta\u00e7\u00e3o do produto",
+    "dashboard": {
+      "title": "Dashboard",
+      "text": "Projetei o dashboard para evidenciar o principal ponto de entrada no fluxo de trabalho di\u00e1rio e dar hierarquia visual clara \u00e0s informa\u00e7\u00f5es de alta prioridade, usando componentes consistentes do design system."
+    },
+    "inbox": {
+      "title": "Inbox",
+      "text": "Projetei a interface de atribui\u00e7\u00e3o e processamento com r\u00f3tulos claros, um campo de entrada em destaque e estados expl\u00edcitos \u2014 tornando a a\u00e7\u00e3o dispon\u00edvel e seus pr\u00e9-requisitos vis\u00edveis num relance."
+    },
+    "caseManagement": {
+      "title": "Gerenciamento de casos",
+      "text": "O sistema era funcionalmente forte, mas, nos testes, os especialistas n\u00e3o confiavam totalmente na automa\u00e7\u00e3o \u2014 alguns diziam que ainda imprimiriam documentos para conferir. Projetei a interface para tornar a automa\u00e7\u00e3o transparente: estados distintos para o que foi feito, o que estava pendente e o que estava pronto, mas ainda n\u00e3o acionado, para que os usu\u00e1rios pudessem ver e confiar no que o sistema estava fazendo."
+    },
+    "retirementFlow": {
+      "label": "Autoria de ponta a ponta",
+      "title": "Fluxo de processamento de aposentadoria",
+      "text": "Conduzi o design de ponta a ponta do fluxo de processamento de aposentadoria, aplicando o design system e os insights de pesquisa acumulados."
+    }
   },
   "results": {
     "title": "Resultados e impacto",
-    "description": "Ap\u00f3s a implementa\u00e7\u00e3o das melhorias, os testes indicaram avan\u00e7os relevantes na compreens\u00e3o do sistema e na execu\u00e7\u00e3o das tarefas.",
+    "description": "Ap\u00f3s o redesign, a valida\u00e7\u00e3o com especialistas do dom\u00ednio indicou progresso claro na compreens\u00e3o do sistema e na execu\u00e7\u00e3o das tarefas.",
     "dashboardInbox": {
       "title": "Dashboard e Inbox"
     },
@@ -146,8 +157,8 @@
       "Dificuldade de identificar o status atual do caso"
     ],
     "overall": {
-      "score": "Avalia\u00e7\u00e3o geral do teste: 8 de 10",
-      "desc": "O sistema mostrou alta efici\u00eancia e aprendizado r\u00e1pido, permitindo que usu\u00e1rios realizem tarefas complexas rapidamente. Por\u00e9m, falha em orientar decis\u00f5es cr\u00edticas e no onboarding, resultando em inconsist\u00eancias. A transpar\u00eancia dos dados, como na lista de transa\u00e7\u00f5es, foi um fator chave para a confian\u00e7a e usabilidade."
+      "score": "O fluxo de processamento de aposentadoria que projetei foi validado com especialistas do dom\u00ednio de tr\u00eas fundos de pens\u00e3o su\u00ed\u00e7os e obteve m\u00e9dia de 9/10 em disposi\u00e7\u00e3o de uso (n=3).",
+      "desc": "Al\u00e9m da nota, o resultado mais importante foi qualitativo: os usu\u00e1rios deixaram de querer imprimir documentos para conferir e passaram a descrever o fluxo como transparente e confi\u00e1vel \u2014 confirmando que o redesign fechou a lacuna de confian\u00e7a, n\u00e3o apenas a de efici\u00eancia."
     }
   },
   "nextSteps": {

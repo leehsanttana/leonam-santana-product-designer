@@ -4,7 +4,7 @@
     "since": "Desde 2020",
     "title1": "Product",
     "title2": "Designer",
-    "subtitle": "Crio soluções digitais que equilibram <span className=\"text-text-primary font-medium\">estética</span> e <span className=\"text-text-primary font-medium\">usabilidade</span> para resolver problemas reais e gerar impacto no negócio.",
+    "subtitle": "Faço a ponte entre <span className=\"text-text-primary font-medium\">design e engenharia</span> — transformando requisitos B2B complexos em interfaces escaláveis, com uma <span className=\"text-text-primary font-medium\">mentalidade front-end</span> que as torna reais.",
     "viewProjects": "Ver Projetos",
     "resume": "Meu currículo"
   },
@@ -13,7 +13,7 @@
     "hoverInstruction": "Passe o mouse <br /> em um projeto",
     "list": {
       "core-system": {
-        "type": "Web App • WealthTech • 2024"
+        "type": "Web App • WealthTech • 2023"
       },
       "adocao": {
         "type": "Mobile App • Saúde • 2025"
@@ -37,7 +37,7 @@
       "Design Systems",
       "Prototipagem",
       "Acessibilidade",
-      "UX Research",
+      "Validação de Usabilidade",
       "React",
       "Next.js"
     ]

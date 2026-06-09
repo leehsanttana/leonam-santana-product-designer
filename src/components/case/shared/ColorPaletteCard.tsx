@@ -8,7 +8,7 @@ interface ColorSwatch{
 
 const ColorSwatch = ({ name, hex, isDark }: ColorSwatch) => (
   <div 
-    className="flex flex-col justify-between p-4 rounded-2xl h-[120px] border border-white/5"
+    className="flex flex-col justify-between p-4 rounded-2xl h-30 border border-white/5"
     style={{ backgroundColor: hex }}
   >
     <span className={isDark ? "text-white/80 text-[14px]" : "text-[#904051]/80 text-[14px]"}>

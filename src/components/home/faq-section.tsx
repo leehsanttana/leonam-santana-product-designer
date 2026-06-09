@@ -15,7 +15,7 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="container mx-auto px-ds-sm max-w-[920px] py-ds-lg lg:py-ds-3xl border-b border-border">
+    <section id="faq" className="container mx-auto px-ds-sm max-w-230 py-ds-lg lg:py-ds-3xl border-b border-border">
       <div className="flex flex-col gap-ds-xl">
         <div className="flex flex-col gap-ds-sm text-center md:text-left">
           <h2 className="text-[28px] font-heading font-bold text-text-primary leading-[1.2]">

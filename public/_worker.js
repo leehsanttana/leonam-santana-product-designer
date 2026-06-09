@@ -1,4 +1,4 @@
-export default {
+const worker = {
   async fetch(request, env) {
     const url = new URL(request.url);
     
@@ -34,3 +34,5 @@ export default {
     return Response.redirect(`${url.origin}/${locale}${url.pathname === '/' ? '' : url.pathname}`, 302);
   }
 };
+
+export default worker;

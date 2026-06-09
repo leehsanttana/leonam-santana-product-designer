@@ -7,11 +7,12 @@ import { useTranslations, useLocale } from "next-intl";
 export function CTASection() {
   const t = useTranslations('cta');
   const locale = useLocale();
-  const cvLink = locale === 'en' ? '/leonam_santana_resume.docx' : '/leonam_santana_curriculo.docx';
+  const cvFile = locale === 'en' ? 'Leonam-Santana-Product-Designer.pdf' : 'Leonam-Santana-Product-Designer-PT.pdf';
+  const cvLink = `/${cvFile}`;
 
   return (
-    <section id="contact" className="container mx-auto px-ds-sm max-w-[1440px] py-ds-lg lg:py-ds-3xl">
-      <div className="bg-bg-elevated border border-border p-ds-md md:p-ds-xl lg:p-ds-2xl rounded-[2rem] flex flex-col lg:flex-row items-center justify-between gap-ds-xl relative overflow-hidden shadow-2xl group">
+    <section id="contact" className="container mx-auto px-ds-sm max-w-360 py-ds-lg lg:py-ds-3xl">
+      <div className="bg-bg-elevated border border-border p-ds-md md:p-ds-xl lg:p-ds-2xl rounded-4xl flex flex-col lg:flex-row items-center justify-between gap-ds-xl relative overflow-hidden shadow-2xl group">
 
         <h2 className="text-[32px] md:text-[56px] font-heading font-bold tracking-[-3px] text-text-primary leading-[1.1] max-w-md">
           {t('title')}
@@ -19,7 +20,7 @@ export function CTASection() {
 
         <div className="flex flex-col gap-ds-sm w-full lg:w-auto">
           {/* Email Pill */}
-          <Button asChild className="w-full lg:w-auto h-[48px] px-8">
+          <Button asChild className="w-full lg:w-auto h-12 px-8">
             <a href="mailto:leonamsanttana@gmail.com">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3">
                 <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -48,7 +49,7 @@ export function CTASection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download={social.download ? `CV_Leonam_Santana_${locale.toUpperCase()}.docx` : undefined}
+                  download={social.download ? cvFile : undefined}
                 >
                   {social.icon === 'whatsapp' && (
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

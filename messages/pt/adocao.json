@@ -6,7 +6,7 @@
   "metadata": {
     "role": {
       "label": "PAPEL",
-      "value": "UX/UI Designer (solo)"
+      "value": "Product Designer (UX/UI, solo)"
     },
     "duration": {
       "label": "DURAÇÃO",
@@ -23,7 +23,7 @@
   },
   "sections": {
     "discover": "Entendendo o ecossistema",
-    "define": "Definando o problema real",
+    "define": "Definindo o problema real",
     "idealize": "Explorando caminhos",
     "solution": "Design da solução final",
     "nextSteps": "O que vem a seguir"

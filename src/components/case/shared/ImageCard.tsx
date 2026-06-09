@@ -18,7 +18,7 @@ export function ImageCard({
 }: ImageCardProps) {
   return (
     <div className={cn(
-      "bg-bg-elevated border border-border rounded-[16px] overflow-hidden flex flex-col w-full",
+      "bg-bg-elevated border border-border rounded-2xl overflow-hidden flex flex-col w-full",
       className
     )}>
       {/* Header - Image Description */}

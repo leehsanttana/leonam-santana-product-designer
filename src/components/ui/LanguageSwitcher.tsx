@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
@@ -14,7 +15,7 @@ export function LanguageSwitcher() {
   ];
 
   return (
-    <div className="hidden lg:flex absolute top-8 right-8 z-[100] items-center bg-bg-elevated/80 backdrop-blur-md border border-border p-1 rounded-full shadow-2xl">
+    <div className="hidden lg:flex absolute top-8 right-8 z-100 items-center bg-bg-elevated/80 backdrop-blur-md border border-border p-1 rounded-full shadow-2xl">
       <div className="flex items-center relative gap-1">
         {locales.map((l) => {
           const isActive = locale === l.id;
@@ -22,7 +23,7 @@ export function LanguageSwitcher() {
           return (
             <Link
               key={l.id}
-              href={pathname as any}
+              href={pathname as ComponentProps<typeof Link>["href"]}
               locale={l.id}
               className={`
                 relative px-3 py-1 text-[12px] font-heading font-bold rounded-full transition-colors duration-300

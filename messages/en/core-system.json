@@ -7,11 +7,11 @@
   "metadata": {
     "role": {
       "label": "ROLE",
-      "value": "UX/UI Designer"
+      "value": "Product Designer (UX/UI)"
     },
     "duration": {
       "label": "DURATION",
-      "value": "3 months"
+      "value": "Project: 18 months / My involvement: 3 months"
     },
     "platform": {
       "label": "PLATFORM",
@@ -36,13 +36,13 @@
   },
   "role": {
     "title": "My role in the team",
-    "p1": "Acted as UX/UI Designer, responsible for transforming the existing architecture into a clear, consistent, and usable interface.",
-    "p2": "Worked on building final screens and prototypes used for both user validation and product communication.",
-    "p3": "The project was developed in collaboration with a multidisciplinary team, including a period of on-site work in Switzerland."
+    "p1": "Acted as Product Designer, responsible for transforming the existing architecture into a clear, consistent, and usable interface.",
+    "p2": "Built the final screens and prototypes that a partner agency used for usability validation, and that also supported product communication.",
+    "p3": "The project was developed in collaboration with a multidisciplinary team, including a period of on-site work in Switzerland with domain experts from three Swiss pension funds."
   },
   "discover": {
     "title": "Identifying the gaps",
-    "description": "The project consists of features such as: Dashboard, Inbox (received document management), and Case Processing. Based on the analysis of the existing system and usability test results, I identified critical points that impacted users' understanding and workflow.",
+    "description": "The project consists of features such as: Dashboard, Inbox (received document management), and Case Processing. Working from the research team's usability findings, I translated the results into design priorities and interface decisions, identifying critical points that impacted users' understanding and workflow.",
     "dashboard": {
       "title": "In the Dashboard",
       "gaps": [
@@ -64,13 +64,12 @@
         "Lack of actions for users to confirm that steps have been completed"
       ]
     },
-    "automation": "Furthermore, regarding automation, it was observed that:",
+    "automation": "Furthermore, regarding automation, the research team also found that:",
     "cards": [
       "Mental model exists, but is not being communicated by the UI",
-      "Automation is good, but doesn't pass full confidence",
-      "The product is functionally good, but emotionally insecure"
+      "Automation is good, but doesn't pass full confidence"
     ],
-    "evident": "After analysis of the results, it became evident that:",
+    "evident": "From the research team's findings, it became clear that:",
     "findings": [
       "The system presents high visual clarity and operational efficiency, but fails in initial orientation and confidence building.",
       "Users understand the flows after explanation, indicating a misalignment between the mental model and the interface.",
@@ -79,7 +78,7 @@
   },
   "define": {
     "title": "Defining the problem gaps",
-    "description": "After analysis of the results, it became evident that:",
+    "description": "From the research findings, the core problems became clear:",
     "dashboard": {
       "title": "Dashboard",
       "subtitle": "Problems",
@@ -108,23 +107,35 @@
   },
   "solution": {
     "title": "Redefining the visual structure",
-    "cards": [
-      "I directed user attention to primary actions through visual hierarchy and design system consistency",
-      "I structured the flow in a clear and progressive way, guiding the user through the process stages",
-      "I made interactive elements and states more evident, reducing ambiguity and errors",
-      "I introduced direct and contextual interactions, increasing efficiency and reducing unnecessary navigation",
-      "I increased focus on the active task with visual feedback and motion, reducing distractions",
-      "I reinforced transparency and control with clear states, validations, and action feedback"
-    ]
+    "transition": "The product was functionally good, but emotionally insecure.",
+    "intro": "Working from the research findings and a defined solution direction, I produced the high-fidelity design and applied the product's design system to ensure consistency, accessibility, and scalability across the three core areas.",
+    "videoCaption": "Final solution — product walkthrough",
+    "dashboard": {
+      "title": "Dashboard",
+      "text": "I designed the dashboard to surface the primary entry point into the daily workflow and give clear visual hierarchy to high-priority information, using consistent design-system components."
+    },
+    "inbox": {
+      "title": "Inbox",
+      "text": "I designed the assignment and processing interface with clear labeling, a prominent input field, and explicit states — making the available action and its prerequisites visible at a glance."
+    },
+    "caseManagement": {
+      "title": "Case management",
+      "text": "The system was functionally strong but, in testing, experts didn't fully trust the automation — some said they'd still print documents to double-check. I designed the interface to make automation transparent: distinct states for what was done, pending, and ready-but-not-yet-triggered, so users could see and trust what the system was doing."
+    },
+    "retirementFlow": {
+      "label": "End-to-end ownership",
+      "title": "Retirement-processing flow",
+      "text": "I owned the end-to-end design of the retirement-processing flow, applying the design system and the accumulated research insights."
+    }
   },
   "results": {
     "title": "Results and impact",
-    "description": "After implementing the improvements, tests indicated significant progress in system understanding and task execution.",
+    "description": "After the redesign, validation with domain experts indicated clear progress in system understanding and task execution.",
     "dashboardInbox": {
       "title": "Dashboard and Inbox"
     },
     "caseManager": {
-      "title": "Gerenciador de casos"
+      "title": "Case Manager"
     },
     "labels": {
       "improvements": "Improvements",
@@ -146,8 +157,8 @@
       "Difficulty identifying the current status of the case"
     ],
     "overall": {
-      "score": "Overall test rating: 8 out of 10",
-      "desc": "The system showed high efficiency and fast learning, allowing users to perform complex tasks quickly. However, it fails in guiding critical decisions and onboarding, resulting in inconsistencies. Data transparency, as in the transaction list, was a key factor for confidence and usability."
+      "score": "The retirement-processing flow I designed was validated with domain experts from three Swiss pension funds and scored an average of 9/10 for willingness-to-use (n=3).",
+      "desc": "Beyond the score, the key result was qualitative: users moved from wanting to print documents to double-check, to describing the flow as transparent and trustworthy — confirming the redesign closed the confidence gap, not just the efficiency one."
     }
   },
   "nextSteps": {

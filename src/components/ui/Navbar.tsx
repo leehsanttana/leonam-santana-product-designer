@@ -4,10 +4,15 @@ import React, { useState } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
 
 export function Navbar() {
-  const t = useTranslations('nav');
+  const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
   const { scrollY } = useScroll();
@@ -16,7 +21,7 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
     if (isMobile && latest > previous && latest > 150) {
       setHidden(true);
@@ -27,21 +32,21 @@ export function Navbar() {
   });
 
   const navLinks = [
-    { label: t('projects'), href: "/#projects" },
-    { label: t('about'), href: "/#about" },
-    { label: t('faq'), href: "/#faq" },
-    { label: t('contact'), href: "/#contact" },
+    { label: t("projects"), href: "/#projects" },
+    { label: t("about"), href: "/#about" },
+    { label: t("faq"), href: "/#faq" },
+    { label: t("contact"), href: "/#contact" },
   ];
 
   return (
     <motion.div
       variants={{
         visible: { y: 0 },
-        hidden: { y: "-150%" }
+        hidden: { y: "-150%" },
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 w-full z-[110] pointer-events-none"
+      className="fixed top-0 left-0 w-full z-110 pointer-events-none"
     >
       {/* Desktop Pill Version */}
       <div className="hidden lg:flex justify-center w-full pt-ds-lg pointer-events-auto">
@@ -50,7 +55,10 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-ds-sm group">
             <div
               className="h-8 w-8 rounded-lg flex items-center justify-center text-white font-bold font-heading text-sm shadow-[0px_2px_10px_0px_rgba(224,64,251,0.4)]"
-              style={{ backgroundImage: "linear-gradient(135deg, #e040fb 0%, #8b2fc9 55%, #00e5ff 100%)" }}
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #e040fb 0%, #8b2fc9 55%, #00e5ff 100%)",
+              }}
             >
               L
             </div>
@@ -67,7 +75,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.label}
-                href={link.href as any}
+                href={link.href as React.ComponentProps<typeof Link>["href"]}
                 className="px-ds-sm py-ds-xs text-sm font-light text-text-primary hover:bg-white/5 rounded-full transition-all"
               >
                 {link.label}
@@ -84,7 +92,9 @@ export function Navbar() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-[#00c87a] opacity-40 animate-pulse"></span>
               <span className="relative inline-flex rounded-full h-ds-xs w-ds-xs bg-[#00c87a] shadow-[0px_0px_6px_0px_#00c87a]"></span>
             </div>
-            <span className="text-[14px] text-text-secondary font-normal">{t('available')}</span>
+            <span className="text-[14px] text-text-secondary font-normal">
+              {t("available")}
+            </span>
           </div>
         </header>
       </div>
@@ -93,10 +103,17 @@ export function Navbar() {
       <div className="lg:hidden w-full pointer-events-auto">
         <header className="w-full bg-bg-elevated/90 backdrop-blur-xl border-b border-border flex items-center justify-between px-ds-md py-ds-sm shadow-lg">
           {/* Left Side: Logo */}
-          <Link href="/" className="flex items-center gap-ds-sm group" onClick={() => setMobileMenuOpen(false)}>
+          <Link
+            href="/"
+            className="flex items-center gap-ds-sm group"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <div
               className="h-8 w-8 rounded-lg flex items-center justify-center text-white font-bold font-heading text-sm shadow-[0px_2px_10px_0px_rgba(224,64,251,0.4)]"
-              style={{ backgroundImage: "linear-gradient(135deg, #e040fb 0%, #8b2fc9 55%, #00e5ff 100%)" }}
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #e040fb 0%, #8b2fc9 55%, #00e5ff 100%)",
+              }}
             >
               L
             </div>
@@ -111,7 +128,16 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               {mobileMenuOpen ? (
                 <>
                   <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -128,7 +154,6 @@ export function Navbar() {
           </button>
         </header>
 
-
         {/* Mobile Menu Dropdown */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -143,7 +168,9 @@ export function Navbar() {
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
-                    href={link.href as any}
+                    href={
+                      link.href as React.ComponentProps<typeof Link>["href"]
+                    }
                     onClick={() => setMobileMenuOpen(false)}
                     className="px-ds-sm py-ds-lg text-base font-normal text-text-primary hover:bg-white/5 rounded-lg transition-all"
                   >
@@ -157,11 +184,41 @@ export function Navbar() {
                       <span className="absolute inline-flex h-full w-full rounded-full bg-[#00c87a] opacity-40 animate-pulse"></span>
                       <span className="relative inline-flex rounded-full h-ds-xs w-ds-xs bg-[#00c87a] shadow-[0px_0px_6px_0px_#00c87a]"></span>
                     </div>
-                    <span className="text-[14px] text-text-secondary font-normal">{t('available')}</span>
+                    <span className="text-[14px] text-text-secondary font-normal">
+                      {t("available")}
+                    </span>
                   </div>
                   <div className="flex items-center bg-bg-subtle rounded-full border border-border/50 p-ds-xs">
-                    <Link href={pathname as any} locale="en" className={cn("px-ds-md py-ds-xs text-xs font-heading font-bold rounded-full transition-colors", locale === 'en' ? "bg-accent-pink text-white" : "text-text-secondary hover:text-text-primary")} onClick={() => setMobileMenuOpen(false)}>EN</Link>
-                    <Link href={pathname as any} locale="pt" className={cn("px-ds-md py-ds-xs text-xs font-heading font-bold rounded-full transition-colors", locale === 'pt' ? "bg-accent-pink text-white" : "text-text-secondary hover:text-text-primary")} onClick={() => setMobileMenuOpen(false)}>PT</Link>
+                    <Link
+                      href={
+                        pathname as React.ComponentProps<typeof Link>["href"]
+                      }
+                      locale="en"
+                      className={cn(
+                        "px-ds-md py-ds-xs text-xs font-heading font-bold rounded-full transition-colors",
+                        locale === "en"
+                          ? "bg-accent-pink text-white"
+                          : "text-text-secondary hover:text-text-primary",
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      EN
+                    </Link>
+                    <Link
+                      href={
+                        pathname as React.ComponentProps<typeof Link>["href"]
+                      }
+                      locale="pt"
+                      className={cn(
+                        "px-ds-md py-ds-xs text-xs font-heading font-bold rounded-full transition-colors",
+                        locale === "pt"
+                          ? "bg-accent-pink text-white"
+                          : "text-text-secondary hover:text-text-primary",
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      PT
+                    </Link>
                   </div>
                 </div>
               </nav>

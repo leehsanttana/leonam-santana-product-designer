@@ -33,7 +33,7 @@ export function CaseSection({
         )}
 
         <h2 className="text-3xl font-heading font-bold text-text-primary mb-ds-sm">{title}</h2>
-        <div className="text-[18px] text-text-secondary max-w-[750px] leading-[1.6] font-light">
+        <div className="text-[18px] text-text-secondary max-w-187.5 leading-[1.6] font-light">
           {typeof description === "string" ? <p>{description}</p> : description}
         </div>
       </div>

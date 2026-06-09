@@ -13,7 +13,7 @@ interface FaqCardProps {
 export function FaqCard({ question, answer, isOpen, onClick }: FaqCardProps) {
   return (
     <div
-      className={`rounded-[16px] overflow-hidden transition-all duration-300 border ${isOpen
+      className={`rounded-2xl overflow-hidden transition-all duration-300 border ${isOpen
         ? "bg-accent-pink/5 border-accent-pink/20"
         : "bg-bg-elevated border-border hover:border-accent-pink/30"
         }`}

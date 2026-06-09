@@ -21,11 +21,11 @@ const buttonVariants = cva(
         cyan: "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20",
       },
       size: {
-        default: "h-[44px] px-ds-md py-ds-xs",
+        default: "h-11 px-ds-md py-ds-xs",
         sm: "h-9 px-ds-sm text-xs",
-        lg: "h-[54px] px-ds-xl text-base",
-        icon: "h-[44px] w-[44px]",
-        social: "h-[52px] w-[100px]",
+        lg: "h-13.5 px-ds-xl text-base",
+        icon: "h-11 w-11",
+        social: "h-13 w-25",
       },
     },
     defaultVariants: {

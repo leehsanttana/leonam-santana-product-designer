@@ -21,7 +21,7 @@ export function RetroGrid({
       </div>
 
       {/* Mask */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent to-90%" />
+      <div className="absolute inset-0 bg-linear-to-t from-background to-transparent to-90%" />
     </div>
   );
 }

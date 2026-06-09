@@ -20,7 +20,9 @@ export function CaseTitleHeader({
     <section className="mb-ds-lg">
       <div className="flex flex-wrap gap-ds-xs mb-ds-md">
         {skills.map((skill) => (
-          <SkillTag key={skill} variant="default">{skill}</SkillTag>
+          <SkillTag key={skill} variant="default">
+            {skill}
+          </SkillTag>
         ))}
       </div>
 
@@ -28,14 +30,17 @@ export function CaseTitleHeader({
         {title}
       </h1>
 
-      <p className="text-xl text-text-secondary max-w-[750px] mb-ds-md leading-relaxed font-light">
+      <p className="text-xl text-text-secondary max-w-187.5 mb-ds-md leading-relaxed font-light">
         {description}
       </p>
 
       {metrics && metrics.length > 0 && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-ds-sm mb-ds-md">
           {metrics.map((metric, i) => (
-            <div key={i} className="flex flex-col gap-ds-xs p-ds-sm rounded-2xl bg-bg-elevated border border-border shadow-sm">
+            <div
+              key={i}
+              className="flex flex-col gap-ds-xs p-ds-sm rounded-2xl bg-bg-elevated border border-border shadow-sm"
+            >
               <span className="text-[14px] font-medium tracking-[2px] uppercase text-text-muted">
                 {metric.label}
               </span>
@@ -48,8 +53,7 @@ export function CaseTitleHeader({
       )}
 
       {heroImage && (
-        <div className="w-full h-[300px] aspect-[21/9] bg-bg-elevated rounded-2xl overflow-hidden relative border border-border shadow-2xl overflow-clip">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+        <div className="w-full h-75 aspect-21/9 bg-bg-elevated rounded-2xl overflow-hidden relative border border-border shadow-2xl">
           <img
             src={heroImage}
             alt={title}

@@ -115,7 +115,7 @@
   .text-body-01 {
     font-family: var(--font-lexend);
     font-weight: 400;
-    @apply text-base md:text-[18px] leading-relaxed md:leading-[30px];
+    @apply text-base md:text-[18px] leading-relaxed md:leading-7.5;
   }
 
   .text-body-02 {

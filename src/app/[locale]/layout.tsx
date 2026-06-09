@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Lexend, Space_Grotesk } from "next/font/google";
 import "../globals.css";
 import { Navbar } from "@/components/ui/Navbar";

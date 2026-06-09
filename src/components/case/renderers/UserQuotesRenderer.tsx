@@ -33,7 +33,7 @@ export function UserQuotesRenderer({ id, persona }: UserQuotesProps) {
         <div className="relative mb-16 px-6 border-l-2 border-accent-pink/30">
           <Quote className="absolute -top-6 -left-2 w-10 h-10 text-accent-pink opacity-20 rotate-180" />
           <p className="text-xl md:text-2xl font-light text-text-primary italic leading-relaxed">
-            "{persona.quote}"
+            &ldquo;{persona.quote}&rdquo;
           </p>
         </div>
 

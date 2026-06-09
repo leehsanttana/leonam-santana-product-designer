@@ -21,7 +21,7 @@ export function BenchmarkingTable({ columns, rows }: BenchmarkingTableProps) {
   return (
     <div className="mb-12 overflow-x-auto">
       <div
-        className="min-w-[900px] bg-bg-elevated border border-border rounded-[16px] p-4 grid grid-cols-4 gap-4"
+        className="min-w-225 bg-bg-elevated border border-border rounded-2xl p-4 grid grid-cols-4 gap-4"
         style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
       >
         {/* Table Headers */}
@@ -60,7 +60,7 @@ export function BenchmarkingTable({ columns, rows }: BenchmarkingTableProps) {
                 return (
                   <div key={cellIdx} className="flex flex-col">
                     <p className={cn(
-                      "text-[14px] leading-[20px] font-light",
+                      "text-[14px] leading-5 font-light",
                       isQuote ? "italic" : "",
                       sentimentColor
                     )}>

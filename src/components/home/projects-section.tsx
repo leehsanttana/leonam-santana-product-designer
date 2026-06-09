@@ -18,7 +18,7 @@ export function ProjectsSection() {
   const mobileProject = PROJECTS[mobileIndex];
 
   return (
-    <section id="projects" className="container mx-auto px-ds-sm max-w-[1440px] py-ds-lg lg:py-ds-3xl border-b border-border">
+    <section id="projects" className="container mx-auto px-ds-sm max-w-360 py-ds-lg lg:py-ds-3xl border-b border-border">
       <div className="flex flex-col gap-ds-xl">
         <h2 className="text-[12px] font-medium tracking-[3px] uppercase text-text-muted">{t('sectionTitle')}</h2>
 
@@ -70,7 +70,7 @@ export function ProjectsSection() {
                 >
                   <Link href={mobileProject.disabled ? "#" : mobileProject.href} className="block w-full group">
                     <div className="flex flex-col gap-ds-md">
-                      <div className="relative w-full aspect-[4/5] bg-bg-subtle rounded-[24px] overflow-hidden border border-border shadow-sm">
+                      <div className="relative w-full aspect-4/5 bg-bg-subtle rounded-3xl overflow-hidden border border-border shadow-sm">
                         <img
                           src={mobileProject.image}
                           alt={mobileProject.title}
@@ -131,8 +131,8 @@ export function ProjectsSection() {
           </div>
 
           {/* Project Viewer (Right Column) */}
-          <div className="hidden lg:block w-[373px] h-[466px] shrink-0 sticky top-ds-lg">
-            <div className={`w-full h-full rounded-[24px] bg-bg-elevated border transition-all duration-500 overflow-hidden flex items-center justify-center relative ${!hoveredId ? 'border-dashed border-border' : 'border-border shadow-2xl'}`}>
+          <div className="hidden lg:block w-93.25 h-116.5 shrink-0 sticky top-ds-lg">
+            <div className={`w-full h-full rounded-3xl bg-bg-elevated border transition-all duration-500 overflow-hidden flex items-center justify-center relative ${!hoveredId ? 'border-dashed border-border' : 'border-border shadow-2xl'}`}>
               <AnimatePresence mode="wait">
                 {activeProject ? (
                   <motion.div
@@ -149,7 +149,7 @@ export function ProjectsSection() {
                       className="w-full h-full object-cover"
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main/60 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-bg-main/60 to-transparent" />
                   </motion.div>
                 ) : (
                   <motion.div

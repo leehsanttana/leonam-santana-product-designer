@@ -9,10 +9,11 @@ import { Link } from "@/i18n/routing";
 export function HeroSection() {
   const t = useTranslations('hero');
   const locale = useLocale();
-  const cvLink = locale === 'en' ? '/leonam_santana_resume.docx' : '/leonam_santana_curriculo.docx';
+  const cvFile = locale === 'en' ? 'Leonam-Santana-Product-Designer.pdf' : 'Leonam-Santana-Product-Designer-PT.pdf';
+  const cvLink = `/${cvFile}`;
 
   return (
-    <section id="hero" className="container mx-auto px-ds-sm max-w-[1440px] min-h-screen py-ds-2xl flex flex-col justify-center border-b border-border relative overflow-hidden">
+    <section id="hero" className="container mx-auto px-ds-sm max-w-360 min-h-screen py-ds-2xl flex flex-col justify-center border-b border-border relative overflow-hidden">
       <RetroGrid />
       <div className="relative z-10 w-full flex flex-col">
         <div className="flex flex-col md:flex-row justify-between mb-ds-xl text-[12px] font-medium tracking-[2px] uppercase text-text-muted">
@@ -42,7 +43,7 @@ export function HeroSection() {
                 href={cvLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                download={`CV_Leonam_Santana_${locale.toUpperCase()}.docx`}
+                download={cvFile}
                 className="w-full justify-center"
               >
                 {t('resume')}

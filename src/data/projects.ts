@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     id: "01",
     slug: "core-system",
     title: "Core System",
-    type: "Web App • WealthTech • 2024",
+    type: "Web App • WealthTech • 2023",
     href: "/projects/core-system",
     disabled: false,
     image: "/Core-system-case/core-system-project-banner.jpg",

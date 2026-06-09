@@ -57,7 +57,7 @@ export function TypographyCard() {
       </div>
 
       <div className="overflow-x-auto">
-        <div className="min-w-[600px]">
+        <div className="min-w-150">
           <TypographyRow name="Name" weight="Font-Weight" size="Font-size" isHeader />
           {data.map((row, idx) => (
             <TypographyRow key={idx} {...row} />
